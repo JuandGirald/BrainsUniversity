@@ -1,0 +1,247 @@
+//User Home styles
+
+.navbar-fixed-top {
+	.navbar-inner {
+		height: 5em;
+		img {
+			margin-top: -0.2em;
+		}
+	}
+}
+
+.logo {
+	margin: 1em 0;
+	img {
+		width: 100%;
+	}
+}
+
+header {
+	background-color: #D1E2E4;
+	background-image: url(../assets/img_banner.jpg);
+  position: relative;
+ 	background-size: cover;
+ 	font-family: 'Exo 2', sans-serif;
+}
+
+.main-logo {
+  margin-top: 12%;
+  h1 {
+  	font-size: 4em;
+  	color: white;
+  }
+}
+
+.video-intro.span6 {
+	margin: 2em 0;
+}
+.main-text.span5 {
+	margin: 2% 0;
+	margin-left: 3em;
+	p {
+		font-size: 1.5em;
+		margin-top: 2em;
+		text-align: left;
+		color: white;
+	}
+	.btn.btn-danger.btn-large.ui-link {
+		color: white;
+		margin-top: 1em;
+	}
+}
+
+.box-table {
+	display: table;
+	width: 100%;
+}
+#nav-top li a:hover, #nav li a.clicked {
+  text-decoration: none;
+  color: #da4f49;
+  transition: all 0.5s;
+  i {
+    color: #da4f49;
+    transition: all 0.5s;  
+  }
+}
+
+#nav-top li {
+  float: left;
+}
+#nav-top li a {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+  color: #363636;
+  text-align: center;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-transition: all .5s;
+  -webkit-transition: all .5s;
+  transition: all 0.5s;
+}
+#nav-top li a i {
+  color: #da4f49;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 2em;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-transition: all .5s;
+  -webkit-transition: all .5s;
+  transition: all 0.5s;
+}
+
+#nav-boxes {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+#nav-boxes a {
+  display: table-cell;
+  color: #8CAD76;
+  font-weight: 700;
+  font-size: 22px;
+  text-align: center;
+  padding: 25px 0;
+  text-decoration: none;
+  vertical-align: middle;
+}
+#nav-boxes a:hover {
+  text-decoration: none;
+}
+
+#nav-boxes a i {
+  display: block;
+  margin-bottom: 25px;
+  position: relative;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s; /* Safari and Chrome */
+  -moz-animation-duration: 1.5s;
+  opacity: 1 !important;
+}
+
+/* ABOUT US */
+#about-us {
+  background: #251E1E;
+  color: white;
+  padding: 100px 0 75px;
+  overflow: hidden;
+  clear: both;
+}
+
+.dot-bg {
+  padding-top: 40px;
+  background: url("../assets/dots.png") no-repeat center top;
+  margin-top: 15px;
+}
+
+.intro-text {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 26px;
+  margin: 30px 0;
+  text-align: center;
+  clear: both;
+}
+
+.social a {
+  font-size: 20px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-transition: all .5s;
+  -webkit-transition: all .5s;
+}
+.social a:hover {
+  background: url('bgb20.png') repeat;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-transition: all .5s;
+  -webkit-transition: all .5s;
+}
+.our_team {
+  overflow: hidden;
+}
+.member {
+  width: 25%;
+  display: block;
+  float: left;
+  transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-transition: all .5s;
+  -webkit-transition: all .5s;
+}
+.member:hover {
+  background: url('../assets/bgb30.png') repeat;
+  transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-transition: all .5s;
+  -webkit-transition: all .5s;
+}
+.member h4 {
+  font-weight: 600;
+}
+.member .pos {
+  font-weight: 300;
+  color: #fff;
+  color: rgba(255,255,255,0.5);
+}
+.member .social {
+  margin: 15px 0;
+}
+#testimonial {
+  padding: 75px 0;
+  background-image: url("../assets/parallax-3.png");
+}
+.testimonial-box {
+  width: 50%;
+  margin: 0 auto;
+}
+.testimonial {
+  overflow: hidden;
+}
+.testimonial img {
+  width: 75px;
+  height: 75px;
+}
+.testimonial .name {
+  font-size: 22px;
+  font-weight: 600;
+}
+.testimonial p {
+  margin: 10px 0 0;
+}
+#navi {
+  text-align: center;
+  margin: 15px 0;
+  clear: both;
+}
+#navi span {
+  display: inline-block;
+  margin: 0 10px;
+  border: #e0e0e0 solid 3px;
+  border-radius: 50%;
+  background: #fff;
+  text-indent: 9999px;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  cursor: pointer;
+}
+#navi span.cycle-pager-active {
+  background: #e0e0e0;
+}
+
