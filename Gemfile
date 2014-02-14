@@ -31,6 +31,9 @@ group :development, :test do
   gem 'rspec-rails', '2.13.1'
 end
 
+group :development do
+  gem "rails-erd"
+end
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

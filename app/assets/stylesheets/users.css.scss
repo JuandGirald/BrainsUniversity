@@ -18,7 +18,7 @@
 
 header {
 	background-color: #D1E2E4;
-	background-image: url(../assets/img_banner.jpg);
+	background-image: url(../assets/5.png);
   position: relative;
  	background-size: cover;
  	font-family: 'Exo 2', sans-serif;
@@ -44,9 +44,14 @@ header {
 		text-align: left;
 		color: white;
 	}
-	.btn.btn-danger.btn-large.ui-link {
+	.btn.btn-large.ui-link {
+    background: -webkit-linear-gradient(left, #006699 , #0066cc); /* For Safari */
+    background: -o-linear-gradient(right, #006699 , #0066cc); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #006699 , #0066cc); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #006699 , #0066cc); /* Standard syntax */
 		color: white;
 		margin-top: 1em;
+    border: none
 	}
 }
 
@@ -80,7 +85,7 @@ header {
   transition: all 0.5s;
 }
 #nav-top li a i {
-  color: #da4f49;
+  color: #0066cc;
   display: block;
   margin-bottom: 5px;
   font-size: 2em;
@@ -124,8 +129,8 @@ header {
 
 /* ABOUT US */
 #about-us {
-  background: #251E1E;
-  color: white;
+  background: white;
+  color: #666666;
   padding: 100px 0 75px;
   overflow: hidden;
   clear: both;

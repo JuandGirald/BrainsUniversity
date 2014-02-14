@@ -20,8 +20,6 @@
 //= require jquery.scrollTo
 //= require jquery.mobile
 //= require twitter/bootstrap
-// Loads all Bootstrap javascripts
-//= require bootstrap
 
 //= require_tree .
 
