@@ -1,5 +1,8 @@
 
 //User Home styles
+*{
+	font-family: 'Roboto', sans-serif;
+}
 
 .navbar-fixed-top {
 	.navbar-inner {
@@ -22,7 +25,6 @@ header {
 	background-image: url(../assets/5.png);
   position: relative;
  	background-size: cover;
- 	font-family: 'Exo 2', sans-serif;
 }
 
 .main-logo {
@@ -60,15 +62,7 @@ header {
 	display: table;
 	width: 100%;
 }
-#nav-top li a:hover, #nav li a.clicked {
-  text-decoration: none;
-  color: #da4f49;
-  transition: all 0.5s;
-  i {
-    color: #da4f49;
-    transition: all 0.5s;  
-  }
-}
+
 
 #nav-top li {
   float: left;
