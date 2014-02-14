@@ -1,13 +1,25 @@
+<<<<<<< HEAD
 SolvingBooks::Application.routes.draw do
   get "static_pages/home"
   get "static_pages/help"
   resources :users
 
+=======
+SolvingBook::Application.routes.draw do
+  root 'static_pages#home'
+
+  get "static_pages/home"
+  get "static_pages/help"
+>>>>>>> a5242cddd8841ea4b86fce973bd8e7901e3a927b
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+<<<<<<< HEAD
    root 'static_pages#home'
+=======
+  # root 'welcome#index'
+>>>>>>> a5242cddd8841ea4b86fce973bd8e7901e3a927b
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

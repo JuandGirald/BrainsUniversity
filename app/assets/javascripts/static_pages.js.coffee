@@ -21,4 +21,3 @@ $(document).ready ->
 
 	$("header").scrollspy target: ".navbar"
 
-	

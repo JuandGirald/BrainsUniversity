@@ -9,6 +9,10 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
+<<<<<<< HEAD
+=======
+require 'securerandom'
+>>>>>>> a5242cddd8841ea4b86fce973bd8e7901e3a927b
 
 def secure_token
   token_file = Rails.root.join('.secret')
@@ -23,4 +27,9 @@ def secure_token
   end
 end
 
+<<<<<<< HEAD
 SolvingBooks::Application.config.secret_key_base = secure_token
+=======
+SolvingBook::Application.config.secret_key_base = secure_token
+
+>>>>>>> a5242cddd8841ea4b86fce973bd8e7901e3a927b

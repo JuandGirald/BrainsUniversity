@@ -3,4 +3,8 @@
 
 require File.expand_path('../config/application', __FILE__)
 
+<<<<<<< HEAD
 SolvingBooks::Application.load_tasks
+=======
+SolvingBook::Application.load_tasks
+>>>>>>> a5242cddd8841ea4b86fce973bd8e7901e3a927b
