@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 SolvingBooks::Application.configure do
-=======
-SolvingBook::Application.configure do
->>>>>>> a5242cddd8841ea4b86fce973bd8e7901e3a927b
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
