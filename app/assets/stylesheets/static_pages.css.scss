@@ -20,6 +20,15 @@
 	}
 }
 
+
+.intro-container {
+	color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+}
+
 header {
 	background-color: #D1E2E4;
 	background-image: url(../assets/5.png);
@@ -32,6 +41,13 @@ header {
   h1 {
   	font-size: 4em;
   	color: white;
+  	margin-bottom: 0;
+  }
+  h2 {
+  	font-weight: 100;
+  	font-size: 2em;
+  	color: white;
+  	margin-bottom: 2em;
   }
 }
 
