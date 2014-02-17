@@ -22,8 +22,8 @@
 
 
 .intro-container {
+	width: 73.125em;
 	color: rgba(255,255,255,1);
-  background: black;
   background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
   background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
   background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
@@ -52,13 +52,14 @@ header {
 }
 
 .video-intro.span6 {
-	margin: 2em 0;
+	margin: 2em 2em;
 }
 .main-text.span5 {
 	margin: 2% 0;
 	margin-left: 3em;
 	p {
 		font-size: 1.5em;
+		font-weight: 100;
 		margin-top: 2em;
 		text-align: left;
 		color: white;
