@@ -8,11 +8,11 @@
   background-image: url(../assets/5.png);
   position: relative;
   background-size: cover;
-  height: 40em
+  height: 46em
 }
 
 .sign-up {
-  margin-top: 10em;
+  margin-top: 6em;
   h1 {
     text-align: center;
     color: white;
@@ -20,13 +20,28 @@
   form {
     margin: auto;
     width: 30em;
+    .form-inputs{
+      .field_with_errors{
+        background-color: transparent;
+        padding: 0;
+        display: inherit;
+        input, textarea, select, .uneditable-input {
+          background-color: #ffe4eb;
+        }
+        .error{
+          display: none;
+        }
+      }
+      div{
+        margin-bottom: 1.2em;
+      }
+    }
     .control-group{
       margin: 2em 0;
     }
     input, textarea, select, .uneditable-input {
     background-color: #f2f2f2;
-    border: 1px solid #bbb;
-    font-size: 1.5em;
+    font-size: 1.4em;
     width: 100%;
     @include box_sizing;
     }
@@ -35,6 +50,21 @@
     }
   }
   
+  #error_explanation {
+    background-color: transparent;
+    border: none;
+    margin: 0 22em;
+    text-align: center;
+    ul {
+      list-style: none;
+      margin: 0 0 18px 0;
+      color: white;
+      li{
+        list-style: none;
+        font-size: 1.2em;
+      }
+    }
+  }
 }
 #user_remember_me {
   margin: 0.1em -0.5em;
@@ -66,4 +96,34 @@
     color: white !important;
     position: absolute;
   }
+}
+
+/* sidebar */
+
+aside {
+  section {
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
 }
