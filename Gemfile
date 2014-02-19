@@ -3,7 +3,8 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+
+gem 'rails', '4.0.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -67,8 +68,10 @@ gem 'bootstrap-sass', '~> 3.0.3.0'
 
 gem "lazyload-rails"
 
+gem 'simple_form'
+
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
