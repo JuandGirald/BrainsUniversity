@@ -1,0 +1,68 @@
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.sign-in-page {
+  background-image: url(../assets/5.png);
+  position: relative;
+  background-size: cover;
+}
+
+.sign-up {
+  margin-top: 10em;
+  h1 {
+    text-align: center;
+    color: white;
+  }
+  form {
+    margin: auto;
+    width: 30em;
+    .control-group{
+      margin: 2em 0;
+    }
+    input, textarea, select, .uneditable-input {
+    background-color: #f2f2f2;
+    border: 1px solid #bbb;
+    font-size: 1.5em;
+    width: 100%;
+    @include box_sizing;
+    }
+    .btn{
+      border: none;
+    }
+  }
+  
+}
+#user_remember_me {
+  margin: 0.1em -0.5em;
+  width: 1em;
+}
+.link-sign-in {
+  width: 30em;
+  margin: auto;
+  margin-top: 3em;
+  height: 4em;
+  color: rgba(255,255,255,1);
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  label {
+    float: left;
+    margin: 1.5em 4em !important;
+  }
+  a {
+    color: #999999 !important;
+    margin: 1.5em -3.5em;
+    font-style: italic;
+    position: absolute;
+  }
+}
+.remembers_links {
+  margin: 0.2em 38em;
+  a {
+    color: white !important;
+    position: absolute;
+  }
+}
