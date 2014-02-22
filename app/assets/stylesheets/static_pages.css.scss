@@ -24,6 +24,7 @@
 .intro-container {
 	width: 73.125em;
 	color: rgba(255,255,255,1);
+  margin-left: 0;
   background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
   background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
   background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
@@ -31,7 +32,7 @@
 
 header {
 	background-color: #D1E2E4;
-	background-image: url(../assets/5.png);
+	background: url(../assets/5.png);
   position: relative;
  	background-size: cover;
 }
@@ -85,6 +86,7 @@ header {
   float: left;
 }
 #nav-top li a {
+  font-family: 'Duru Sans', sans-serif;
   display: table-cell;
   width: 100%;
   vertical-align: middle;
@@ -139,6 +141,10 @@ header {
   opacity: 1 !important;
 }
 
+#pages{
+  margin-top: -2em;
+}
+
 /* ABOUT US */
 #about-us {
   background: white;
@@ -146,10 +152,18 @@ header {
   padding: 100px 0 75px;
   overflow: hidden;
   clear: both;
+  .container{
+    margin-top: -2em;
+  }
+  h1{
+    color: #66ccff;
+    font-size: 2.5em;
+    margin-bottom: 1.5em; 
+  }
 }
 
 .dot-bg {
-  padding-top: 40px;
+  padding-top: 2em;
   background: url("../assets/dots.png") no-repeat center top;
   margin-top: 15px;
 }
@@ -190,8 +204,9 @@ header {
 .our_team {
   overflow: hidden;
 }
+
 .member {
-  width: 25%;
+  width: 33.3%;
   display: block;
   float: left;
   transition: all .5s;
@@ -199,6 +214,12 @@ header {
   -o-transition: all .5s;
   -ms-transition: all .5s;
   -webkit-transition: all .5s;
+  img{
+    max-width: 80%;
+    -webkit-border-radius: 13em;
+    -moz-border-radius: 13em;
+    border-radius: 13em;
+  }
 }
 .member:hover {
   background: url('../assets/bgb30.png') repeat;
@@ -208,19 +229,25 @@ header {
   -ms-transition: all .5s;
   -webkit-transition: all .5s;
 }
-.member h4 {
-  font-weight: 600;
+.member{
+  h4 {
+    font-weight: normal;
+    color: #333333;
+  }
+  p{
+    color: #666666;
+    margin-top: 1em;
+  }
 }
 .member .pos {
-  font-weight: 300;
-  color: #fff;
-  color: rgba(255,255,255,0.5);
+  font-weight: normal;
+  color: #0099cc
 }
 .member .social {
   margin: 15px 0;
 }
 #testimonial {
-  padding: 75px 0;
+  padding: 2em 0;
   background-image: url("../assets/parallax-3.png");
 }
 .testimonial-box {
@@ -260,5 +287,72 @@ header {
 }
 #navi span.cycle-pager-active {
   background: #e0e0e0;
+}
+
+
+/* SUBJECTS */
+
+
+#subjects{
+  background: url(../assets/students.jpg) fixed;
+  background-size: cover;
+  .dot-bg{
+    margin-bottom: 1.5em;
+  }
+  h1{
+    color: white;
+    font-size: 2.5em;
+  }
+  .container{
+    margin-top: 2em;
+  }
+  .subject {
+    .video-subject{
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+    width: 24%;
+    display: block;
+    float: left;
+    img{
+      max-width: 35%;
+    }
+    h4 {
+      font-weight: normal;
+      color: white;
+    }
+  }
+}
+
+.subject.text-center.intro-container {
+  margin-bottom: 2em;
+  margin-left: 1%;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - 
+MEDIA QUERIES FOR LARGER BREAKPOINTS BEGIN HERE
+- - - - - - - - - - - - - - - - - - - - - - - - */
+
+@media screen and (max-width: 800px) {
+  .intro-container.span12{
+    margin-left: 0;
+  }
+  .main-logo{
+    margin-top: 0;
+    h1{
+      font-size: 3em;
+    }
+    h2{
+      font-size: 2em;
+      margin-bottom: 1em;
+    }
+  }
+  .main-text.span5{
+    margin-left: 0;
+    p{
+      font-size: 1.2em;
+      margin-top: 0;
+    }
+  }
 }
 
