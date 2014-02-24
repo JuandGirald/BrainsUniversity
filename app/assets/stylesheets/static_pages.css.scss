@@ -8,7 +8,7 @@
 	.navbar-inner {
 		height: 5em;
 		img {
-			margin-top: -0.2em;
+			margin-top: 0.5em;
 		}
 	}
 }
@@ -153,11 +153,11 @@ header {
   overflow: hidden;
   clear: both;
   .container{
-    margin-top: -2em;
+    margin-top: -4em;
     margin-bottom: -4em;
   }
   h1{
-    color: #66ccff;
+    color: #2676B3;
     font-size: 2.5em;
     margin-bottom: 1.5em; 
   }
@@ -249,7 +249,13 @@ header {
 }
 #testimonial {
   padding: 2em 0;
-  background-image: url("../assets/parallax-3.png");
+  background-image: url("../assets/parallax-3.png") ;
+}
+.parallax{
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center
 }
 .testimonial-box {
   width: 50%;
@@ -330,6 +336,42 @@ header {
 .subject.text-center.intro-container {
   margin-bottom: 2em;
   margin-left: 1%;
+}
+
+#footer_social{
+  height: 8em;
+  background: -webkit-linear-gradient(left, #006699 50%, #0099CC); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, #006699 50%, #0099CC); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, #006699 50%, #0099CC); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right #006699, #0099CC); /* Standard syntax */
+  .span12{
+    margin-top: 1em;
+    margin-left: 8em;
+    color: white;
+    h1{
+      font-weight: 100;
+      font-size: 3em;
+    }
+    .follow{
+        margin: -4.5em 0 0 15em;
+      a{
+        border: 0.1px solid;
+        font-weight: 100;
+        font-size: 1.6em;
+        line-height: 40px;
+        -webkit-border-radius: 2em;
+        -moz-border-radius: 10px;
+        border-radius: 2em;
+        background-color: white;
+      }
+    }
+    p{
+      float: right;
+      margin: -2.5em 2em;
+      color: #FFF7FB;
+      font-weight: 100;
+    }
+  }
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - 

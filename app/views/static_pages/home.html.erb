@@ -9,15 +9,15 @@
       <div class="container">
         <div class="logo pull-left">
           <a href="/">
-            <img src="/assets/logo2.png" alt="Main Logo" >
+            <img src="/assets/TopLogo.png" alt="Main Logo" >
           </a>  
         </div>
         <div id="nav-top" class="pull-right">
           <ul class="nav unstyled">
-            <li ><a href="#portfolio"><i class="fa fa-book fa-3x"></i>Books</a></li>
-            <li ><a href="#"><i class="fa fa-user fa-3x"></i>About Us</a></li>
-            <li ><a href="#contact"><i class="fa fa-phone fa-3x"></i>Contact</a></li>
-            <li ><a href="/signup"><i class="fa fa-sign-in fa-3x"></i>Sign in</a></li>
+            <li ><a href="#portfolio"><i class="fa fa-book fa-3x"></i>Videos</a></li>
+            <li ><a href="#"><i class="fa fa-user fa-3x"></i>Creadores</a></li>
+            <li ><a href="#contact"><i class="fa fa-phone fa-3x"></i>Contacto</a></li>
+            <li ><a href="/signup"><i class="fa fa-sign-in fa-3x"></i>Ingresar</a></li>
           </ul>
         </div>
       </div>
@@ -89,7 +89,49 @@
     </div>
   </section>
 
-
+<!-- ========== TESTIMONIAL BOX ========== -->
+  <section id="testimonial" class="inverse parallax">
+    <div class="container">
+      <div class="cycle-slideshow testimonial-box" data-cycle-fx="fade" data-cycle-swipe="true" data-cycle-timeout="6000" data-cycle-pager="#navi" data-cycle-slides=">div">
+        <div class="testimonial">
+          <div class="row-fluid">
+            <div class="span3">
+              <img alt="" src="assets/selvio.png" width="75" height="75">
+            </div>
+            <div class="span9">
+              <span class="name">Selvio Pérez ,</span> CEO<br>
+              <p>"Sólo es capaz de realizar los sueños el que, cuando llega la hora, sabe estar despierto."</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="row-fluid">
+            <div class="span3">
+              <img alt="" src="assets/juandavid.png" width="75" height="75">
+            </div>
+            <div class="span9">
+              <span class="name">Juan David Giraldo,</span> CTO<br>
+              <p>"Aprendamos a vivir un día a la vez, los pequeños pasos son los que nos preparan para los grandes pasos del futuro.</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="row-fluid">
+            <div class="span3">
+              <img alt="" src="assets/jorge.png" width="75" height="75">
+            </div>
+            <div class="span9">
+              <span class="name">Jorge Monroy,</span> COO <br>
+              <p>"Un hombre con una idea nueva es un loco hasta que la idea triunfa."</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div id="navi"></div>
+      </div>
+    </div>
+  </section>
   <!-- ========== ABOUT US ========== -->
 
   <section id="about-us">
@@ -130,65 +172,24 @@
           </ul>
         </div>
       </div>
-      <h1 class="text-center">¡Estamos a tu servicio!</h1>
       
     </div>
   </section>
 
 
-  <!-- ========== TESTIMONIAL BOX ========== -->
-  <section id="testimonial" class="inverse parallax">
-    <div class="container">
-      <div class="cycle-slideshow testimonial-box" data-cycle-fx="fade" data-cycle-swipe="true" data-cycle-timeout="6000" data-cycle-pager="#navi" data-cycle-slides=">div">
-        <div class="testimonial">
-          <div class="row-fluid">
-            <div class="span3">
-              <img alt="" src="assets/selvio.png" width="75" height="75">
-            </div>
-            <div class="span9">
-              <span class="name">Selvio Pérez ,</span> CEO<br>
-              <p>"Sólo es capaz de realizar los sueños el que, cuando llega la hora, sabe estar despierto."</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="row-fluid">
-            <div class="span3">
-              <img alt="" src="assets/juandavid.png" width="75" height="75">
-            </div>
-            <div class="span9">
-              <span class="name">Juan David Giraldo,</span> CTO<br>
-              <p>"Aprendamos a vivir un día a la vez, los pequeños pasos son los que nos preparan para los grandes pasos del futuro.</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="row-fluid">
-            <div class="span3">
-              <img alt="" src="assets/jorge.png" width="75" height="75">
-            </div>
-            <div class="span9">
-              <span class="name">Jorge Monroy,</span> COO <br>
-              <p>"Un hombre con una idea nueva es un loco hasta que la idea triunfa."</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="row-fluid">
-            <div class="span3">
-              <img alt="" src="assets/team_4.jpg" width="75" height="75">
-            </div>
-            <div class="span9">
-              <span class="name">John B Doe,</span> Developer<br>
-              <p>These guys are simply outstanding! Being able to delegate a project completely
-                and then be surprised by the outcome.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="navi"></div>
-      </div>
-    </div>
-  </section>
+  
 </section>
 <%= render 'layouts/footer' %>
+<section id="footer_social">
+	<div class="span12 row-fuid">
+		<h1>¡Síguenos!</h1>
+		<div class="follow">
+			<ul class="unstyled inline social">
+	      <li><a data-placement="top" title="Twitter" class="fa fa-twitter  fa-2x" href="#"></a></li>
+	      <li><a data-placement="top" title="FaceBook" class="fa fa-facebook fa-2x" href="#"></a></li>
+	    </ul>	
+		</div> 
+		<p>'La verdad hos hará libres' - Jesucristo</p>
+	</div>
+
+</section>
