@@ -154,6 +154,7 @@ header {
   clear: both;
   .container{
     margin-top: -2em;
+    margin-bottom: -4em;
   }
   h1{
     color: #66ccff;
@@ -221,14 +222,14 @@ header {
     border-radius: 13em;
   }
 }
-.member:hover {
-  background: url('../assets/bgb30.png') repeat;
-  transition: all .5s;
-  -moz-transition: all .5s;
-  -o-transition: all .5s;
-  -ms-transition: all .5s;
-  -webkit-transition: all .5s;
-}
+// .member:hover {
+//   background: url('../assets/bgb30.png') repeat;
+//   transition: all .5s;
+//   -moz-transition: all .5s;
+//   -o-transition: all .5s;
+//   -ms-transition: all .5s;
+//   -webkit-transition: all .5s;
+// }
 .member{
   h4 {
     font-weight: normal;
@@ -260,6 +261,7 @@ header {
 .testimonial img {
   width: 75px;
   height: 75px;
+  border-radius: 3em;
 }
 .testimonial .name {
   font-size: 22px;
@@ -267,6 +269,7 @@ header {
 }
 .testimonial p {
   margin: 10px 0 0;
+  color: #666666;
 }
 #navi {
   text-align: center;
@@ -294,13 +297,13 @@ header {
 
 
 #subjects{
-  background: url(../assets/students.jpg) fixed;
+  background: url(../assets/teacher.jpg) fixed;
   background-size: cover;
   .dot-bg{
     margin-bottom: 1.5em;
   }
   h1{
-    color: white;
+    color: #2676B3;
     font-size: 2.5em;
   }
   .container{

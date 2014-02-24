@@ -10,6 +10,11 @@ $grayMediumLight: #eaeaea;
 
 footer {
   border-top: 1px solid $grayMediumLight;
-  background-color: #363636;
-  height: 5em
+  background-color: #333333;
+  height: 8em;
+  .glass{
+	  margin-top: 0.5em;
+	  float: right;
+	  width: 11em;
+  }
 }
