@@ -1,25 +1,15 @@
 <% provide(:title, 'Sign up') %>
 <div class="sign-in-page row">
-  <div class="navbar navbar-fixed-top" role="navigation">
-    <div class="navbar-inner">
-      <div class="container">
-        <div class="logo pull-left">
-          <a href="/">
-            <img src="/assets/TopLogo.png" alt="Main Logo" >
-          </a>  
-        </div>
+  <div class="container sign-up">
+      <div>
+        <%= render 'shared/error_messages' %>
+        <h1>INGRESAR</h1>
+
+        <%= render "form" %>
         
       </div>
-    </div>
+      <div class="link-sign-in">
+        <label>holis</label>
+      </div>
   </div>
-
-
-<div class="container sign-up">
-    <div>
-      <%= render 'shared/error_messages' %>
-      <h1>INGRESAR</h1>
-
-      <%= render "form" %>
-      
-    </div>
-  </div>
+</div>

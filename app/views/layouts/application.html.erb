@@ -11,7 +11,26 @@
 </head>
 
 <body >
-
+  <div class="navbar navbar-fixed-top" role="navigation">
+    <div class="navbar-inner">
+      <div class="container">
+        <div class="logo pull-left">
+          <a href="/">
+            <img src="/assets/TopLogo.png" alt="Main Logo" >
+          </a>  
+        </div>
+        <div id="nav-top" class="pull-right">
+          <ul class="nav unstyled">
+            <li ><a href="#portfolio"><i class="fa fa-book fa-3x"></i>Videos</a></li>
+            <li ><a href="#"><i class="fa fa-user fa-3x"></i>Creadores</a></li>
+            <li ><a href="#contact"><i class="fa fa-phone fa-3x"></i>Contacto</a></li>
+            <li ><a href="/signin"><i class="fa fa-sign-in fa-3x"></i>Ingresar</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 	<% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
