@@ -13,11 +13,13 @@ $(document).ready ->
 	bw = 100 / bc
 	$("#nav-boxes div a").css "width", bw + "%"
 
+	
+	#pop-up videos
 	# nav box hover
-	$("#nav-boxes a").hover (->
-	  $(this).find("i").addClass "animated flipInY 1s"
-	), ->
-	  $(this).find("i").removeClass "animated flipInY 1s"
+	# $("#nav-boxes a").hover (->
+	#   $(this).find("i").addClass "animated flipInY 1s"
+	# ), ->
+	#   $(this).find("i").removeClass "animated flipInY 1s"
 
-	$("header").scrollspy target: ".navbar"
+	# $("header").scrollspy target: ".navbar"
 

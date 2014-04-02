@@ -14,12 +14,12 @@
 //= require turbolinks
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
+//= require jquery.mobile
 //= require jquery.cycle2
-//= require jquery.cycle2.carousel
-//= require jquery.cycle2.swipe
+//= require jquery.cycle2.all
 //= require jquery.scrollTo.min
 //= require jquery.scrollTo
-//= require jquery.mobile
 //= require twitter/bootstrap
 
 //= require_tree .
