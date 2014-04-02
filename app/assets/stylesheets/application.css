@@ -13,5 +13,6 @@
  *= require normalize-rails
  *= require font-awesome
  *= require animate
+ *= require jquery.ui.all
  *= require jquery.mobile
  */

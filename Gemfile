@@ -20,6 +20,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -63,13 +64,14 @@ gem 'cycle2-rails', git: 'git://github.com/thinkswan/cycle2-rails.git', branch: 
 
 gem "jquery-scrollto-rails"
 
-gem 'jquery_mobile_rails'
-
 gem 'bootstrap-sass', '~> 3.0.3.0'
 
 gem "lazyload-rails"
 
 gem 'simple_form'
+
+gem 'jquery_mobile_rails'
+
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.2'

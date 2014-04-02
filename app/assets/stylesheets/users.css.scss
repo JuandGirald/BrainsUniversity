@@ -8,10 +8,10 @@
   background-image: url(../assets/5.png);
   position: relative;
   background-size: cover;
-  height: 46em
+  height: 56em
 }
 
-.sign-up {
+.sign-forms {
   margin-top: 6em;
   h1 {
     text-align: center;
@@ -40,10 +40,11 @@
       margin: 2em 0;
     }
     input, textarea, select, .uneditable-input {
-    background-color: #f2f2f2;
-    font-size: 1.4em;
-    width: 100%;
-    @include box_sizing;
+      background-color: #f2f2f2;
+      font-size: 1.4em;
+      height: 2.5em;
+      width: 100%;
+      @include box_sizing;
     }
     .btn{
       border: none;
@@ -53,7 +54,7 @@
   #error_explanation {
     background-color: transparent;
     border: none;
-    margin: 0 22em;
+    margin: 0 26em;
     text-align: center;
     ul {
       list-style: none;
@@ -64,6 +65,11 @@
         font-size: 1.2em;
       }
     }
+  }
+}
+.sign-in{
+  h1{
+    margin-top: 2em;
   }
 }
 #user_remember_me {
@@ -81,11 +87,11 @@
   background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
   label {
     float: left;
-    margin: 1.5em 4em !important;
+    margin: 1.5em 9em !important;
   }
   a {
     color: #999999 !important;
-    margin: 1.5em -3.5em;
+    margin: -1.2em 5em;
     font-style: italic;
     position: absolute;
   }
@@ -126,4 +132,10 @@ aside {
 .gravatar {
   float: left;
   margin-right: 10px;
+}
+
+/* Flash messages */
+
+.alert-error{
+  text-align: center;
 }
