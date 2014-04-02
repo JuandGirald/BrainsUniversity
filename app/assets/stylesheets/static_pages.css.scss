@@ -54,14 +54,17 @@ header {
 
 .video-intro.span6 {
 	margin: 2em 2em;
+  img {
+    max-width: 90%;
+  }
 }
 .main-text.span5 {
-	margin: 8% 0;
-	margin-left: 3em;
+	margin: 6% 0;
+	margin-left: 2em;
 	p {
 		font-size: 1.5em;
 		font-weight: 100;
-		margin-top: 2em;
+		margin-top: 0em;
 		text-align: left;
 		color: white;
 	}
@@ -346,8 +349,9 @@ header {
   background: linear-gradient(to right #006699, #0099CC); /* Standard syntax */
   .span12{
     margin-top: 1em;
-    margin-left: 8em;
+    margin-left: 4em;
     color: white;
+    width: 88%;
     h1{
       font-weight: 100;
       font-size: 3em;
@@ -367,7 +371,7 @@ header {
     }
     p{
       float: right;
-      margin: -2.5em 2em;
+      margin: -2.5em 0em;
       color: #FFF7FB;
       font-weight: 100;
     }
