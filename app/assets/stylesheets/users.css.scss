@@ -54,7 +54,7 @@
   #error_explanation {
     background-color: transparent;
     border: none;
-    margin: 0 26em;
+    margin: auto;
     text-align: center;
     ul {
       list-style: none;
@@ -86,14 +86,12 @@
   background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
   background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
   label {
-    float: left;
-    margin: 1.5em 9em !important;
+    padding-top: 1em !important;
+    text-align: center;
   }
   a {
     color: #999999 !important;
-    margin: -1.2em 5em;
     font-style: italic;
-    position: absolute;
   }
 }
 .remembers_links {
