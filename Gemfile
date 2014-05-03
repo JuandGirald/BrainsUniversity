@@ -70,7 +70,6 @@ gem "lazyload-rails"
 
 gem 'simple_form'
 
-gem 'jquery_mobile_rails'
 
 
 # Use ActiveModel has_secure_password
