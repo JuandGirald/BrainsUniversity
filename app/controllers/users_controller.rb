@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :signed_in_user, only: [:show, :edit, :update]
+  before_action :correct_user,   only: [:edit, :update]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -44,7 +46,8 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        flash[:success] = "El usuario fue actualizado satisfactoriamente"
+        format.html { redirect_to @user}
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -65,6 +68,18 @@ class UsersController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def signed_in_user
+      unless signed_in?
+        store_location
+        redirect_to signin_url, notice: "Please sign in."
+      end
+    end
+
+    def correct_user
+      set_user
+      redirect_to(root_url) unless current_user?(@user)
+    end
+
     def set_user
       @user = User.find(params[:id])
     end
@@ -74,4 +89,6 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation)
     end
+
+
 end

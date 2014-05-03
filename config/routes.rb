@@ -1,4 +1,5 @@
 SolvingBooks::Application.routes.draw do
+  match '/home',  to: 'static_pages#home',       via: 'get'
   get "static_pages/home"
   get "static_pages/help"
 

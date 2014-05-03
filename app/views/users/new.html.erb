@@ -1,15 +1,15 @@
 <% provide(:title, 'Sign up') %>
 <div class="sign-in-page row">
   <div class="container sign-forms sign-up">
-      <div>
-        <%= render 'shared/error_messages' %>
-        <h1>INGRESAR</h1>
+    <div>
+      <%= render 'shared/error_messages' %>
+      <h1>INGRESAR</h1>
 
-        <%= render "form" %>
-        
-      </div>
-      <div class="link-sign-in">
-        <label>¿Ya tienes cuenta? <%= link_to "¡Ingresa ya!", signin_path %></label>
-      </div>
+      <%= render "form" %>
+      
+    </div>
+    <div class="link-sign-in">
+      <label>¿Ya tienes cuenta? <%= link_to "¡Ingresa ya!", signin_path %></label>
+    </div>
   </div>
 </div>
