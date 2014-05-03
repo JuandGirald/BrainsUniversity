@@ -82,8 +82,6 @@ GEM
       railties (> 3.1, < 5.0)
     jquery-ui-rails (4.2.0)
       railties (>= 3.2.16)
-    jquery_mobile_rails (1.4.1)
-      railties (>= 3.1.0)
     json (1.8.1)
     lazyload-rails (0.2.0)
       nokogiri (~> 1.5)
@@ -206,7 +204,6 @@ DEPENDENCIES
   jquery-rails
   jquery-scrollto-rails
   jquery-ui-rails
-  jquery_mobile_rails
   lazyload-rails
   normalize-rails
   pg (= 0.15.1)
