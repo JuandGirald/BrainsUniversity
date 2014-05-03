@@ -1,4 +1,4 @@
-$(document).ready ->
+$(document).on "pageinit", ->
 	$('.ui-loader-default').hide();
 	psw = $(window).width()
 	psh = $(window).height()
