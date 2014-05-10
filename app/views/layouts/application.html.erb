@@ -3,8 +3,8 @@
 <head>
   <title> <%= full_title(yield(:title)) %> </title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,100italic,100&subset=all' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Duru+Sans&subset=all' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,100italic,100&subset=all' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Duru+Sans&subset=all' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -37,10 +37,10 @@
           </a>  
         </div>
         <div id="nav-top" class="pull-right">
-          <ul class="nav unstyled">
+          <ul id="top-menu" class="nav unstyled">
             <li ><a href="#subjects"><i class="fa fa-book fa-3x"></i>Videos</a></li>
-            <li ><a href="#"><i class="fa fa-user fa-3x"></i>Creadores</a></li>
-            <li ><a href="#about-us"><i class="fa fa-phone fa-3x"></i>Contacto</a></li>
+            <li ><a href="#about-us"><i class="fa fa-user fa-3x"></i>Creadores</a></li>
+            <li ><a href="#contact"><i class="fa fa-phone fa-3x"></i>Contacto</a></li>
             <% if signed_in? %>
               <li><%= link_to "Users", '#' %></li>
               <li id="fat-menu" class="dropdown">
