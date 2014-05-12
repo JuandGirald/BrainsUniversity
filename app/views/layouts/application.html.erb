@@ -5,10 +5,27 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,100italic,100&subset=all' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Duru+Sans&subset=all' rel='stylesheet' type='text/css'>
+
+  <!-- fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  <!-- Le CSS
+    ================================================== -->
+  <link rel="stylesheet" href="assets/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/picons.css">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- Js -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="assets/modernizr.custom.js"></script>
+  <script src="assets/bootstrap.min.js"></script>
+
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   
+
   <!-- Add mousewheel plugin (this is optional) -->
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script type="text/javascript" src="assets/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
@@ -27,50 +44,22 @@
   
 </head>
 
-<body >
-  <div class="navbar navbar-fixed-top" role="navigation">
-    <div class="navbar-inner">
-      <div class="container">
-        <div class="logo pull-left">
-          <a class="home_link" href="">
-            <img src="/assets/TopLogo.png" alt="Main Logo" >
-          </a>  
-        </div>
-        <div id="nav-top" class="pull-right">
-          <ul id="top-menu" class="nav unstyled">
-            <li ><a href="#subjects"><i class="fa fa-book fa-3x"></i>Videos</a></li>
-            <li ><a href="#about-us"><i class="fa fa-user fa-3x"></i>Creadores</a></li>
-            <li ><a href="#contact"><i class="fa fa-phone fa-3x"></i>Contacto</a></li>
-            <% if signed_in? %>
-              <li><%= link_to "Users", '#' %></li>
-              <li id="fat-menu" class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  Account <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><%= link_to "Profile", current_user %></li>
-                  <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-                  <li class="divider"></li>
-                  <li>
-                    <%= link_to "Sign out", signout_path, method: "delete" %>
-                  </li>
-                </ul>
-              </li>
-            <% else %>
-              <li ><a href="/signin"><i class="fa fa-sign-in fa-3x"></i>Ingresar</a></li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+<body id="top">
 
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
   
-	
-	<%= yield %>
+  
+  <%= yield %>
+
+  <script src="assets/library.js"></script>
+  <script src="assets/scripts.js"></script>
+  <script>
+    $(function() {
+        Grid.init();
+    });
+  </script>
 
 </body>
 </html>

@@ -2,12 +2,7 @@ $(document).ready ->
 	$('.ui-loader-default').hide();
 	psw = $(window).width()
 	psh = $(window).height()
-	$("header").height(psh).width psw
-	$(window).bind "orientationchange throttledresize", ->
-	  psw = $(window).width()
-	  psh = $(window).height()
-	  $("header").height(psh).width psw
-
+	
 	cw = $(".container").width()
 	bc = $("#nav-boxes div a").length
 	bw = 100 / bc
@@ -23,8 +18,7 @@ $(document).ready ->
 
 	return
 
-	$("#nav-top a, .logo a, #nav a, #navmobile ul a").scrollTo('#subjects', duration: "slow")
-    
+	
 
 	
 	#pop-up videos

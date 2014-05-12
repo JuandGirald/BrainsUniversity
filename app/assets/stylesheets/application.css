@@ -17,5 +17,9 @@
  *= require	fancybox/source/jquery.fancybox
  *= require	fancybox/source/helpers/jquery.fancybox-thumbs
  *= require	fancybox/source/helpers/jquery.fancybox-buttons
+ 
+ *= require bootstrap.min
+ *= require picons
+ *= require style
 
  */
