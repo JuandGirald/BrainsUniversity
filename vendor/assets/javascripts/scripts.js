@@ -98,7 +98,7 @@ $('.ribbon').click(function (e) {
           compareTop    = partial === true ? _bottom : _top,
           compareBottom = partial === true ? _top : _bottom;
     
-    return ((compareBottom <= viewBottom) );
+    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
 
   };
     
@@ -285,61 +285,61 @@ if($('.social-wrapper .social').length == true) {
    Animated Skillbars
    ========================================================================== */
 
-// function isScrolledIntoView(id){
-//     var elem = "#" + id;
-//     var docViewTop = $(window).scrollTop();
-//     var docViewBottom = docViewTop + $(window).height();
+function isScrolledIntoView(id){
+    var elem = "#" + id;
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
 
-//     if ($(elem).length > 0){
-//         var elemTop = $(elem).offset().top;
-//         var elemBottom = elemTop + $(elem).height();
-//     }
+    if ($(elem).length > 0){
+        var elemTop = $(elem).offset().top;
+        var elemBottom = elemTop + $(elem).height();
+    }
 
-//     return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom)
-//       && (elemBottom <= docViewBottom) &&  (elemTop >= docViewTop) );
-// }
+    return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom)
+      && (elemBottom <= docViewBottom) &&  (elemTop >= docViewTop) );
+}
 
-// $(window).scroll(function(){
-//     $('.skillbar').each(function(){
-//         if ($(this).hasClass('notinview')){
-//             $(this).find('.pointerval .value').html('0%');
-//             if (isScrolledIntoView($(this).attr('id'))){
-//                 $(this).removeClass('notinview');
-//                 $(this).find('.skill-bar-percent').animate({
-//                     width:jQuery(this).closest('.skillbar').attr('data-percent')
-//                 },{
-//                     duration : 2000, //the duration in ms of the bar animation
-//                     easing: 'easeInOutExpo', //the easing effect of the animation
-//                     step: function(now, fx){
-//                         $(this).siblings('.pointerval').css('left',parseFloat(now, 10)+'%').find('.value').text(parseInt(now, 10)+'%');
-//                     }
-//                 });       
-//             }
-//         }
-//     });
-// });
+$(window).scroll(function(){
+    $('.skillbar').each(function(){
+        if ($(this).hasClass('notinview')){
+            $(this).find('.pointerval .value').html('0%');
+            if (isScrolledIntoView($(this).attr('id'))){
+                $(this).removeClass('notinview');
+                $(this).find('.skill-bar-percent').animate({
+                    width:jQuery(this).closest('.skillbar').attr('data-percent')
+                },{
+                    duration : 2000, //the duration in ms of the bar animation
+                    easing: 'easeInOutExpo', //the easing effect of the animation
+                    step: function(now, fx){
+                        $(this).siblings('.pointerval').css('left',parseFloat(now, 10)+'%').find('.value').text(parseInt(now, 10)+'%');
+                    }
+                });       
+            }
+        }
+    });
+});
 
-// function sliding_horizontal_graph(id, speed){
-//     $("#" + id + " li span").each(function(i){                                  
-//         var cur_li = $("#" + id + " li").eq(i).find("span");
-//         var w = cur_li.attr("title");
-//         cur_li.animate({width: w + "%"}, speed);
-//     })
-// }
-// function graph_init(id, speed){
-//     $(window).scroll(function(){
-//         if ($('#'+id).hasClass('notinview')){	    	
-//             if (isScrolledIntoView(id)){
-//                 $('#'+id).removeClass('notinview');
-//                 sliding_horizontal_graph(id, speed);
-//             }
-//         }
-//     });
+function sliding_horizontal_graph(id, speed){
+    $("#" + id + " li span").each(function(i){                                  
+        var cur_li = $("#" + id + " li").eq(i).find("span");
+        var w = cur_li.attr("title");
+        cur_li.animate({width: w + "%"}, speed);
+    })
+}
+function graph_init(id, speed){
+    $(window).scroll(function(){
+        if ($('#'+id).hasClass('notinview')){	    	
+            if (isScrolledIntoView(id)){
+                $('#'+id).removeClass('notinview');
+                sliding_horizontal_graph(id, speed);
+            }
+        }
+    });
     
-//     if (isScrolledIntoView(id)){
-//         sliding_horizontal_graph(id, speed);
-//     }
-// }
+    if (isScrolledIntoView(id)){
+        sliding_horizontal_graph(id, speed);
+    }
+}
 
 /* ==========================================================================
    Google Map

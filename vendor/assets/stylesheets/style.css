@@ -592,7 +592,7 @@ header.walking {
 nav {
     background-color:rgb(255,255,255);
     width: 100%;
-    height:50px;
+    height: 70px;
     position: absolute;
     bottom: inherit;
     z-index:10;
@@ -617,23 +617,25 @@ nav.full {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        height: 50px;
+        height: 70px;
+        width: 80%;
+        margin-left: 50%;
     }
     
         nav ul li {
-            height: 50px;
+            height: 70px;
         }
 
             nav ul li.active a {
-                background-color: #FF3366;
+                background-color: #0066cc;
                 color: #FFF !important;
             }
         
             nav ul li a, nav ul li a:visited {
                 display: block;
                 width: 100%;
-                height: 50px;
-                line-height: 50px;
+                height: 70px;
+                line-height: 40px;
                 text-transform: uppercase;
                 font-size: 12px;
                 letter-spacing: 1pt;
@@ -659,9 +661,16 @@ nav.full {
             }
 
             nav ul li a:hover {
-                background-color: #FF3366;
-                color: #fff;
+                background-color: #0066cc;
+                color: #fff;   
             }
+            nav ul li.active a i {
+                color: white !important;
+            }
+            nav ul li a:hover i {
+                color: white !important;
+            }
+            
 
 /*** Scroll to Fixed Position ***/
 
@@ -671,12 +680,12 @@ nav.affix {
     top: 0;
     left: 0;
     z-index: 9999;
-    height: 50px;
+    height: 70px;
 }
 
 nav.affix ul li a, nav.affix ul li a:visited {
-    height: 50px;
-    line-height: 50px;
+    height: 70px;
+    line-height: 40px;
 }
 
 /*** Navigation for Mobile Devices ***/
@@ -684,7 +693,7 @@ nav.affix ul li a, nav.affix ul li a:visited {
 nav select { 
     width: 100%;
     display: none;
-    height: 50px;
+    height: 70px;
     border-radius: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;

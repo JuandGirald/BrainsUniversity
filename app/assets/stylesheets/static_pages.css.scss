@@ -14,6 +14,13 @@
 	}
 }
 
+i.fa.fa-3x {
+  color: #0066cc;
+  display: block;
+  margin-left: 40%;
+  padding-top: 3px;
+}
+
 .logo {
 	margin: 1em 0;
 	img {
@@ -353,6 +360,7 @@
 #subjects{
   background: url(../assets/teacher.jpg) fixed;
   background-size: cover;
+  padding-top: 10px;
   .dot-bg{
     margin-bottom: 1.5em;
   }
