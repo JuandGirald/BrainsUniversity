@@ -1,4 +1,4 @@
-$(document).ready ->
+ready = ->
 	$('.ui-loader-default').hide();
 	psw = $(window).width()
 	psh = $(window).height()
@@ -18,7 +18,8 @@ $(document).ready ->
 
 	return
 
-	
+$(document).ready(ready)
+$(document).on('page:load', ready)
 
 	
 	#pop-up videos

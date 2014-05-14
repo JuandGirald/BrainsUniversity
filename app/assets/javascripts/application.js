@@ -13,21 +13,21 @@
 
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require jquery.ui.all
 //= require jquery.cycle2
 //= require jquery.cycle2.all
 //= require jquery.scrollTo.min
 //= require jquery.scrollTo
-//= requiere fancybox/lib/jquery.mousewheel-3.0.6.pack
-//= requiere fancybox/source/jquery.fancybox.pack
-//= requiere fancybox/source/helpers/jquery.fancybox-media
-//= requiere fancybox/source/helpers/jquery.fancybox-buttons
-//= requiere fancybox/source/helpers/jquery.fancybox-thumbs
+//= require fancybox/lib/jquery.mousewheel-3.0.6.pack
+//= require fancybox/source/jquery.fancybox.pack
+//= require fancybox/source/helpers/jquery.fancybox-media
+//= require fancybox/source/helpers/jquery.fancybox-buttons
+//= require fancybox/source/helpers/jquery.fancybox-thumbs
 //= require bootstrap.min
+//= require jquery.lazyload
 //= require modernizr.custom
 //= require library
 //= require scripts
-
 //= require_tree .
 
+//= require turbolinks

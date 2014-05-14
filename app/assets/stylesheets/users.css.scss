@@ -4,6 +4,27 @@
   box-sizing: border-box;
 }
 
+// User-menu
+
+#user-menu {
+  width: 55%;
+  li {
+    float: right;
+    a:hover{
+      background-color: white !important;
+      color: #666 !important;
+    }
+  }
+}
+
+
+#user-menu li a:hover i {
+  color: #0066cc  !important;
+}
+
+
+// Users-styles
+
 .sign-in-page {
   background-image: url(../assets/5.png);
   position: relative;
