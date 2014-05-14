@@ -2,11 +2,10 @@
 <div class="row">
   <aside class="span4">
     <section>
-      <h1>
-        <img src="https://secure.gravatar.com/avatar/#{Digest::MD5::hexdigest(user.email.downcase)}">
-    		
-        <%= @user.name %>
-      </h1>
+     <h1>
+	  <%= gravatar_for @user %>
+	  <%= @user.name %>
+	</h1>
     </section>
   </aside>
 </div>

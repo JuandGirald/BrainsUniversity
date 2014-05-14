@@ -2,75 +2,117 @@
 <html>
 <head>
   <title> <%= full_title(yield(:title)) %> </title>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,100italic,100&subset=all' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Duru+Sans&subset=all' rel='stylesheet' type='text/css'>
+
+  <!-- fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  <!-- Le CSS
+    ================================================== -->
+  <%= stylesheet_link_tag    "bootstrap.min" %>
+  <%= stylesheet_link_tag    "picons" %>
+  <%= stylesheet_link_tag    "style" %>
+  
+  <!-- Js -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <%= javascript_include_tag "jquery.lazyload" %>
+  <%= javascript_include_tag "modernizr.custom" %>
+  <%= javascript_include_tag "bootstrap.min" %>
+  
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   
+
   <!-- Add mousewheel plugin (this is optional) -->
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script type="text/javascript" src="assets/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+  <%= javascript_include_tag "fancybox/lib/jquery.mousewheel-3.0.6.pack" %>
 
   <!-- Add fancyBox -->
-  <link rel="stylesheet" href="assets/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-  <script type="text/javascript" src="assets/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  <%= stylesheet_link_tag    "fancybox/source/jquery.fancybox" %>
+  <%= javascript_include_tag "fancybox/source/jquery.fancybox.pack" %>
 
   <!-- Optionally add helpers - button, thumbnail and/or media -->
-  <link rel="stylesheet" href="assets/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
-  <script type="text/javascript" src="assets/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-  <script type="text/javascript" src="assets/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+  <%= stylesheet_link_tag    "fancybox/source/helpers/jquery.fancybox-buttons" %>
+  <%= javascript_include_tag "fancybox/source/helpers/jquery.fancybox-buttons" %>
+  <%= javascript_include_tag "fancybox/source/helpers/jquery.fancybox-media" %>
 
-  <link rel="stylesheet" href="assets/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-  <script type="text/javascript" src="assets/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+  <%= stylesheet_link_tag    "fancybox/source/helpers/jquery.fancybox-thumbs" %>
+  <%= javascript_include_tag "fancybox/source/helpers/jquery.fancybox-thumbs" %>
+  
   
 </head>
 
-<body >
-  <div class="navbar navbar-fixed-top" role="navigation">
-    <div class="navbar-inner">
-      <div class="container">
-        <div class="logo pull-left">
-          <a class="home_link" href="">
-            <img src="/assets/TopLogo.png" alt="Main Logo" >
-          </a>  
-        </div>
-        <div id="nav-top" class="pull-right">
-          <ul id="top-menu" class="nav unstyled">
-            <li ><a href="#subjects"><i class="fa fa-book fa-3x"></i>Videos</a></li>
-            <li ><a href="#about-us"><i class="fa fa-user fa-3x"></i>Creadores</a></li>
-            <li ><a href="#contact"><i class="fa fa-phone fa-3x"></i>Contacto</a></li>
-            <% if signed_in? %>
-              <li><%= link_to "Users", '#' %></li>
-              <li id="fat-menu" class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  Account <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><%= link_to "Profile", current_user %></li>
-                  <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-                  <li class="divider"></li>
-                  <li>
-                    <%= link_to "Sign out", signout_path, method: "delete" %>
-                  </li>
-                </ul>
-              </li>
-            <% else %>
-              <li ><a href="/signin"><i class="fa fa-sign-in fa-3x"></i>Ingresar</a></li>
-            <% end %>
+<body id="top">
+  <nav>
+    <div class="container">
+      <div class="logo pull-left">
+        <%= link_to '', root_path %>
+        <a class="home_link" href="">
+          <img src="/assets/TopLogo.png" alt="Main Logo" >
+        </a>  
+      </div>
+      <% if current_page?('/')  %>
+  
+        <div class="row">
+          <ul id="top-menu">
+            <li class="col-sm-1 active"><a href="#top"><i class="fa fa-chevron-up"></i><span class="hidden">Top</span></a></li>
+            <li class="col-sm-2"><a href="#subjects"><i class="fa fa-book fa-3x"></i> Videos</a></li>
+            <li class="col-sm-2"><a href="#about-us"><i class="fa fa-user fa-3x"></i> Creadores</a></li>
+            <li class="col-sm-2"><a href="#contact"><i class="fa fa-phone fa-3x"></i> Contactos</a></li>
           </ul>
         </div>
-      </div>
+        <ul id="video-menu">
+          <li class="col-sm-2 videos">
+            <%= link_to users_path do %>
+              <i class="fa fa-youtube-play fa-3x"></i> Videos
+            <% end %>
+            
+          </li>
+        </ul>
+      <% else %>
+        <% if signed_in? %>
+          
+          <ul >
+            <li class="col-sm-2"><a href="/users"><i class="fa fa-book fa-3x"></i> Perfil </a></li>
+            <li class="col-sm-2"><a href=""><i class="fa fa-youtube-play fa-3x"></i> Videos</a></li>
+            <li class="col-sm-2"><a href="#"><i class="fa fa-male fa-3x"></i> <%= @current_user.name.split[0..1].join(' ') %> </a></li>
+            <li>
+              <%= link_to signout_path, method: "delete", :class => "col-sm-2" do %>
+                <i class="fa fa-sign-out fa-3x"></i> Salir
+              <% end %>
+            </li>
+          </ul> 
+        <% else %>
+          <ul id="user-menu">
+            <li class="col-sm-2 "><a href="/signin"><i class="fa fa-sign-in fa-3x"></i>Ingresar</a></li>
+          </ul>
+        <% end %>
+        
+      <% end %>
+  
     </div>
-  </div>
-
+  </nav>
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
   
-	
-	<%= yield %>
+  
+  <%= yield %>
+
+  <%= javascript_include_tag "library" %>
+  <%= javascript_include_tag "scripts" %>
+  
+  <script>
+    $(function() {
+        Grid.init();
+    });
+  </script>
 
 </body>
 </html>

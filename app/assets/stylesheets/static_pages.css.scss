@@ -14,6 +14,40 @@
 	}
 }
 
+i.fa.fa-3x {
+  color: #0066cc;
+  display: block;
+  margin-left: 40%;
+  padding-top: 3px;
+}
+.fa-youtube-play,
+.fa.fa-male{
+  margin-left: 34% !important;
+}
+.fa-book{
+  margin-left: 36% !important;
+}
+.fa-sign-in{
+  margin-left: 22% !important;
+}
+
+#video-menu {
+  width: 12.6%;
+  float: right;
+  margin-top: -70px;
+  margin-right: -27px;
+  li{
+    width: 100%;
+    a:hover{
+      background-color: white !important;
+      color: #666 !important;
+    }
+  }
+}
+#video-menu li a:hover i {
+  color: #0066cc  !important;
+
+}
 .logo {
 	margin: 1em 0;
 	img {
@@ -21,20 +55,39 @@
 	}
 }
 
+.span3{
+  width: 22%;
+  float: left;
+}
+
+.unstyled{
+  list-style: none;
+  padding: 0;
+  li{
+    display: inline-block;
+  }
+}
+
 
 .intro-container {
-	color: rgba(255,255,255,1);
+  height: 25em;
+  width: 100%;
+  color: rgba(255,255,255,1);
   margin-left: 0;
   background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
   background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
   background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
 }
 
-header {
+#home {
 	background-color: #D1E2E4;
 	background: url(../assets/5.png);
   position: relative;
  	background-size: cover;
+}
+
+#home {
+  height: 100%;
 }
 
 .main-logo {
@@ -54,19 +107,24 @@ header {
 
 .video-intro.span6 {
 	margin: 2em 2em;
+  width: 50%;
+  float: left;
   img {
     max-width: 90%;
   }
 }
 .main-text.span5 {
+  float: left;
 	margin: 6% 0;
 	margin-left: 2em;
+  width: 37%;
 	p {
 		font-size: 1.5em;
 		font-weight: 100;
 		margin-top: 0em;
 		text-align: left;
 		color: white;
+    width: 100%;
 	}
 	.btn.btn-large {
     background: -webkit-linear-gradient(left, #006699 , #0066cc); /* For Safari */
@@ -74,6 +132,7 @@ header {
     background: -moz-linear-gradient(right, #006699 , #0066cc); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to right, #006699 , #0066cc); /* Standard syntax */
 		color: white;
+    font-size: large;
 		margin-top: 1em;
     border: none
 	}
@@ -180,7 +239,8 @@ header {
   h1{
     color: #2676B3;
     font-size: 2.5em;
-    margin-bottom: 1.5em; 
+    margin-bottom: 1.5em;
+    margin-top: 2em;
   }
 }
 
@@ -200,6 +260,7 @@ header {
 }
 
 .social a {
+  color: #0088cc;
   font-size: 20px;
   display: block;
   width: 40px;
@@ -326,6 +387,7 @@ header {
 #subjects{
   background: url(../assets/teacher.jpg) fixed;
   background-size: cover;
+  padding-top: 10px;
   .dot-bg{
     margin-bottom: 1.5em;
   }
