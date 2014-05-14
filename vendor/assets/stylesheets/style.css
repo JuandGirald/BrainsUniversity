@@ -98,6 +98,7 @@ hr {
 /* ==========================================================================
    Customize Inputs
    ========================================================================== */
+
 /*
 
 fieldset {
@@ -162,7 +163,7 @@ select {
     cursor: pointer;
     color: #424649;
     padding-right: 30px;
-    /*background: #FFFFFF url('../images/chevron-down.png') no-repeat scroll right center;*/
+    background: #FFFFFF url('../images/chevron-down.png') no-repeat scroll right center;
 }
 
 select:hover,input:hover,.input:hover input,textarea:hover,.textarea:hover textarea,.checkbox:hover i {
@@ -208,7 +209,7 @@ input[type=checkbox]:disabled,input[type=radio]:disabled {
 
 input[type=radio] {
     -webkit-border-radius: 2em;
-/* Make radios round */;
+
 }
 
 input[type=checkbox]:checked::after {
@@ -228,7 +229,7 @@ input[type=radio]:checked::after {
     text-align: center;
 }
 
-/*** Forms > Append & Prepend ***/
+
 .input.prepend i,.textarea.prepend i {
     position: absolute;
     top: 5px;
@@ -325,9 +326,9 @@ input[type=radio]:checked::after {
     color: #FFFFFF;
 }
 
-/* ==========================================================================
+## ==========================================================================
    Widget
-   ========================================================================== */
+   ========================================================================== ##
 
 #widget {
 	width:100%;
