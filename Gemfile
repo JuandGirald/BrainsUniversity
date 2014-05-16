@@ -70,6 +70,9 @@ gem "lazyload-rails"
 
 gem 'simple_form'
 
+# Video Gem
+gem 'youtube_it', '~> 2.4.0'
+
 
 
 # Use ActiveModel has_secure_password

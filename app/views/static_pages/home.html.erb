@@ -37,7 +37,7 @@
 	<!-- ========== SUBJECTS ========== -->
   <section id="subjects">
   	<div class="container">
-      <h1 class="text-center">Videos</h1>
+      <h1 class="text-center">Materias</h1>
       <div class="dot-bg"></div>
       <div class="our_team">
         <div class="subject text-center intro-container">
@@ -134,7 +134,7 @@
           <h4>Selvio Pérez</h4>
           <span class="pos">Cofundador - CEO</span>
           <p>Ingeniero Electrónico especialista en Gerencia de Proyectos, visionario y soñador; siempre en busca de nuevas ideas y oportunidades.</p>
-          <ul class="unstyled inline social">
+          <ul class="unstyled inline social-user">
             <li><a data-placement="top" title="Twitter" class="fa fa-twitter  fa-2x" href="#"></a></li>
             <li><a data-placement="top" title="FaceBook" class="fa fa-facebook fa-2x" href="#"></a></li>
             <li><a data-placement="top" title="GooglePlus" class="fa fa-google-plus fa-2x" href="#"></a></li>
@@ -145,7 +145,7 @@
           <h4>Jorge Monroy</h4>
           <span class="pos">Cofundador - COO</span>
           <p>Ingeniero Electrónico especialista en Gerencia de Proyectos, apasionado por los negocios y las nuevas ideas.</p>
-          <ul class="unstyled inline social">
+          <ul class="unstyled inline social-user">
             <li><a data-placement="top" title="Twitter" class="fa fa-twitter  fa-2x" href="#"></a></li>
             <li><a data-placement="top" title="FaceBook" class="fa fa-facebook fa-2x" href="#"></a></li>
             <li><a data-placement="top" title="GooglePlus" class="fa fa-google-plus fa-2x" href="#"></a></li>
@@ -156,7 +156,7 @@
           <h4>Juan David Giraldo</h4>
           <span class="pos">Cofundador - CTO</span>
           <p>Ingeniero Electrónico especialista en Teleinformática, desarrollador web apasionado por la tecnología.</p>
-          <ul class="unstyled inline social">
+          <ul class="unstyled inline social-user">
             <li><a data-placement="top" title="Twitter" class="fa fa-twitter  fa-2x" href="#"></a></li>
             <li><a data-placement="top" title="FaceBook" class="fa fa-facebook fa-2x" href="#"></a></li>
             <li><a data-placement="top" title="GooglePlus" class="fa fa-google-plus fa-2x" href="#"></a></li>
@@ -167,20 +167,76 @@
     </div>
   </section>
 
+  <!-- Contacts -->
+
+  <section id="contact" class="fadeInRightBig">
+    <div class="container">
+        <h1 class="title">
+            Contactanos
+        </h1>
+    </div>
+    
+    <div class="container">        
+        <h2 class="sub-title">
+            Use the form below to get a quick quote on a project or to simply say hello. I try to be promt and answer any emails within 48 hours. If you send a spam email, I respond with a creative answer.
+        </h2>
+        
+        <div class="row">
+            <div class="col-sm-8">
+                <form class="contact">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label class="required" for="name">
+                                Your Name
+                                <input type="text" name="name" id="name" placeholder="John Stuart" required>
+                            </label>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="required" for="email">
+                                Your Email
+                                <input type="email" name="email" id="email" placeholder="John@Stuart.com" required>
+                            </label>
+                        </div>
+                    </div>
+                    <label class="required">
+                        Message
+                        <textarea rows="7" placeholder="I have an idea for a project..." required></textarea>
+                    </label>
+                    <div class="add-sm-top text-center">
+                        <button class="btn btn-danger" type="submit"><i class="fa fa-envelope"></i> &nbsp; SEND E-MAIL</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-4 contact-address">
+                <h3 class="heading turquoise add-xs-top">Stay In Touch</h3>
+                <p>Katuski utade marido alifando. Lipsum dolor slo onsec tueraliquet Morbi nec In Curabitur lreaoreet nisl lorem in pellente pellente eget.</p>
+                
+                <h3 class="heading blue add-sm-top">Example addresses</h3>
+                <address><abbr title="Address"><i class="fa fa-thumb-tack"></i></abbr>Catharsis Media Group<br />
+                                                123 Some Street, New York, NY 12345</address>
+                <address><abbr title="Phone"><i class="fa fa-phone"></i></abbr>1.718.456.7890</address>
+                <address><abbr title="Fax"><i class="fa fa-print"></i></abbr>1.718.045.6789</address>
+                <address><abbr title="Email"><i class="fa fa-envelope"></i></abbr>support@catharsis.com</address>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Social Bar -->
+<section id="social-bar">
+    <div class="container">
+        <div class="social-wrapper">
+            <h2>Social Places</h2>
+            <div class="social" style="height: 80px;">
+                <div><a href="#"><img src="assets/social/facebook.png" alt="Facebook"></a></div>
+                <div><a href="#"><img src="assets/social/google.png" alt="Google"></a></div>
+                <div><a href="#"><img src="assets/social/twitter.png" alt="Twitter"></a></div>
+                <div><a href="#"><img src="assets/social/linkedin.png" alt="Linkedin"></a></div>
+                <div><a href="#"><img src="assets/social/youtube.png" alt="Youtube"></a></div>
+            </div><a class="show-more" href="#" style="display: none;"></a>
+        </div>
+    </div>
+</section>
+
 
   
-</section>
-<%= render 'layouts/footer' %>
-<section id="footer_social">
-	<div class="span12 row-fuid">
-		<h1>¡Síguenos!</h1>
-		<div class="follow">
-			<ul class="unstyled inline social">
-	      <li><a data-placement="top" title="Twitter" class="fa fa-twitter  fa-2x" href="#"></a></li>
-	      <li><a data-placement="top" title="FaceBook" class="fa fa-facebook fa-2x" href="#"></a></li>
-	    </ul>	
-		</div> 
-		<p>'La verdad os hará libres' - Jesucristo</p>
-	</div>
-
-</section>

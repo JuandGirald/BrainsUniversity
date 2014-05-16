@@ -10,7 +10,6 @@
  *
  *= require_self
  *= require_tree .
- *= require normalize-rails
  *= require font-awesome
  *= require animate
  *= require jquery.ui.all
@@ -19,6 +18,7 @@
  *= require	fancybox/source/helpers/jquery.fancybox-buttons
  
  *= require bootstrap.min
+ *= require normalize-rails
  *= require picons
  *= require style
 

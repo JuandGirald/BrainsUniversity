@@ -8,6 +8,10 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,100italic,100&subset=all' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Duru+Sans&subset=all' rel='stylesheet' type='text/css'>
 
+  <!-- Youtube api -->
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+
   <!-- fonts -->
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -19,7 +23,7 @@
   <%= stylesheet_link_tag    "style" %>
   
   <!-- Js -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <%= javascript_include_tag "jquery.lazyload" %>
   <%= javascript_include_tag "modernizr.custom" %>
   <%= javascript_include_tag "bootstrap.min" %>
@@ -62,14 +66,14 @@
         <div class="row">
           <ul id="top-menu">
             <li class="col-sm-1 active"><a href="#top"><i class="fa fa-chevron-up"></i><span class="hidden">Top</span></a></li>
-            <li class="col-sm-2"><a href="#subjects"><i class="fa fa-book fa-3x"></i> Videos</a></li>
+            <li class="col-sm-2"><a href="#subjects"><i class="fa fa-book fa-3x"></i> Materias</a></li>
             <li class="col-sm-2"><a href="#about-us"><i class="fa fa-user fa-3x"></i> Creadores</a></li>
             <li class="col-sm-2"><a href="#contact"><i class="fa fa-phone fa-3x"></i> Contactos</a></li>
           </ul>
         </div>
         <ul id="video-menu">
           <li class="col-sm-2 videos">
-            <%= link_to users_path do %>
+            <%= link_to videos_path do %>
               <i class="fa fa-youtube-play fa-3x"></i> Videos
             <% end %>
             
@@ -77,11 +81,14 @@
         </ul>
       <% else %>
         <% if signed_in? %>
-          
           <ul >
-            <li class="col-sm-2"><a href="/users"><i class="fa fa-book fa-3x"></i> Perfil </a></li>
-            <li class="col-sm-2"><a href=""><i class="fa fa-youtube-play fa-3x"></i> Videos</a></li>
-            <li class="col-sm-2"><a href="#"><i class="fa fa-male fa-3x"></i> <%= @current_user.name.split[0..1].join(' ') %> </a></li>
+            <li class="col-sm-2"><a href=""><i class="fa fa-book fa-3x"></i> Perfil </a></li>
+            <li class="col-sm-2"><a href="/videos"><i class="fa fa-youtube-play fa-3x"></i> Videos</a></li>
+            <li class="col-sm-2">
+              <%= link_to current_user do %>
+                <i class="fa fa-male fa-3x"></i> <%= @current_user.name.split[0..1].join(' ') %>
+              <% end %>
+            </li>
             <li>
               <%= link_to signout_path, method: "delete", :class => "col-sm-2" do %>
                 <i class="fa fa-sign-out fa-3x"></i> Salir
@@ -91,6 +98,7 @@
         <% else %>
           <ul id="user-menu">
             <li class="col-sm-2 "><a href="/signin"><i class="fa fa-sign-in fa-3x"></i>Ingresar</a></li>
+            <li class="col-sm-2"><a href="/videos"><i class="fa fa-youtube-play fa-3x"></i> Videos</a></li>
           </ul>
         <% end %>
         
@@ -104,7 +112,10 @@
   
   
   <%= yield %>
-
+  <% if !current_page?('/signin') && !current_page?('/signup')%>
+    <%= render 'layouts/footer' %>
+  <% end %>  
+    
   <%= javascript_include_tag "library" %>
   <%= javascript_include_tag "scripts" %>
   
