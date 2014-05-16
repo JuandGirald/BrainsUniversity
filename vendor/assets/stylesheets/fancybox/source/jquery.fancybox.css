@@ -159,7 +159,7 @@
 	visibility: hidden;
 	max-width: 99999px;
 	max-height: 99999px;
-	overflow: visible !important;
+	overflow: visible;
 }
 
 /* Overlay helper */
