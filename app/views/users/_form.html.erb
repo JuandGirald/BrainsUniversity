@@ -4,9 +4,8 @@
     <%= f.input :email, label: false, requiered: true, :autofocus => true, placeholder: 'Correo' %>
     <%= f.input :password, placeholder: 'Contraseña', label: false %>
   	<%= f.input :password_confirmation, placeholder: 'Confirmar Contraseña', label: false%>
-    <%= f.input :admin, as: :boolean, checked_value: true, unchecked_value: false %>
-  
   </div>
+  
   <% if current_page?('/signup')%>
   	<%= f.button :submit, "Registrarse" , class: "btn btn-primary btn-lg"%>
   <% else %>
