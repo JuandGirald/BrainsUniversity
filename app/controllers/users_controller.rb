@@ -32,7 +32,7 @@ class UsersController < ApplicationController
       if @user.save
         sign_in @user
         flash[:success] = "Welcome to the Sample App!"
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to edit_user_path(@user), notice: 'User was successfully created.' }
         format.json { render action: 'show', status: :created, location: @user }
       else
         format.html { render action: 'new' }
@@ -47,7 +47,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.update(user_params)
         flash[:success] = "El usuario fue actualizado satisfactoriamente"
-        format.html { redirect_to @user}
+        format.html { redirect_to edit_user_path(@user)}
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

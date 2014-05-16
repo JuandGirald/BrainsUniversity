@@ -6,6 +6,9 @@
   	<%= f.input :password_confirmation, placeholder: 'Confirmar Contraseña', label: false%>
   
   </div>
-
-  <%= f.button :submit, "Registrarse" , class: "btn btn-primary btn-lg"%>
+  <% if current_page?('/signup')%>
+  	<%= f.button :submit, "Registrarse" , class: "btn btn-primary btn-lg"%>
+  <% else %>
+  	<%= f.button :submit, "Actualizar" , class: "btn btn-primary btn-lg"%>
+  <% end %>
 <% end %>

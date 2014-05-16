@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <div class="container">
+  <div class="container text-center">
     <h1>Share your videos with the world!</h1>
     <p>Click the button below to share your video from YouTube.</p>
     <p>
@@ -7,10 +7,34 @@
     </p>
   </div>
 
+	<div class="container text-center">
+		<h1>Estos son los videos que hemos recopilado para tí, escoge la materia que necesites<%= @subject %></h1>	
+	</div>
+   
+	<div class="filter-panel">
+		
+		<%= link_to :controller => params[:controller], :action => params[:action], :subject => '' do%>
+			<button class="btn turquoise btn-lg button-search">Todos</button> 
+		<% end %>
+		<%= link_to :controller => params[:controller], :action => params[:action], :subject => 'cálculo' do%>
+			<button class="btn blue btn-lg button-search">Cálculo</button> 
+		<% end %>
+		</button>
+		<%= link_to :controller => params[:controller], :action => params[:action], :subject => 'física' do%>
+			<button class="btn midnight btn-lg button-search">Física</button> 
+		<% end %>
+		<%= link_to :controller => params[:controller], :action => params[:action], :subject => 'química' do%>
+			<button class="btn purple btn-lg button-search">Química</button> 
+		<% end %>
+		<%= link_to :controller => params[:controller], :action => params[:action], :subject => 'algebra lineal' do%>
+			<button class="btn btn-lg button-search orange">A. Lineal</button> 
+		<% end %>
+		
+	</div>
+  		
   <% if @videos.any? %>
 	  <div class="container">
-	    <h1>Latest videos</h1>
-	 
+	    
 	    <div id="player-wrapper"></div>
 	 
 	    <% @videos.in_groups_of(3) do |group| %>

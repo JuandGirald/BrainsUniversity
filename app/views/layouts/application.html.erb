@@ -81,11 +81,10 @@
         </ul>
       <% else %>
         <% if signed_in? %>
-          <ul >
-            <li class="col-sm-2"><a href=""><i class="fa fa-book fa-3x"></i> Perfil </a></li>
+          <ul class="user-menu1">
             <li class="col-sm-2"><a href="/videos"><i class="fa fa-youtube-play fa-3x"></i> Videos</a></li>
             <li class="col-sm-2">
-              <%= link_to current_user do %>
+              <%= link_to edit_user_path(current_user) do %>
                 <i class="fa fa-male fa-3x"></i> <%= @current_user.name.split[0..1].join(' ') %>
               <% end %>
             </li>
@@ -112,7 +111,7 @@
   
   
   <%= yield %>
-  <% if !current_page?('/signin') && !current_page?('/signup')%>
+  <% if !current_page?('/signin') && !current_page?('/signup') && !current_page?(edit_user_path(current_user))%>
     <%= render 'layouts/footer' %>
   <% end %>  
     

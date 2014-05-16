@@ -4,6 +4,11 @@ class Video < ActiveRecord::Base
 	YT_LINK_FORMAT = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/i
  	validates :link, presence: true, format: { with: YT_LINK_FORMAT, multiline: true }
 
+ 	# scopes
+ 	scope :calculo, -> (subject) { where("subject like ?", "%#{subject}%").order('created_at DESC')}
+
+
+ 	# Youtube api and validation
  	before_create -> do
 	  uid = link.match(YT_LINK_FORMAT)
 	  self.uid = uid[2] if uid && uid[2]
