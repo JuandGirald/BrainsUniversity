@@ -5,7 +5,7 @@ class Video < ActiveRecord::Base
  	validates :link, presence: true, format: { with: YT_LINK_FORMAT, multiline: true }
 
  	# scopes
- 	scope :calculo, -> (subject) { where("subject like ?", "%#{subject}%").order('created_at DESC')}
+ 	scope :calculo, -> (subject) { where("subject ilike ?", "%#{subject}%").order('created_at DESC')}
 
 
  	# Youtube api and validation
