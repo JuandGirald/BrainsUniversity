@@ -1,0 +1,9 @@
+<% provide(:title, @video.title) %>
+<section id="video-list">
+	<div class="container">
+		<h1 class="text-center"><%= @video.title %></h1>
+		<div class="video-player">
+			<%= youtube_embed(@video.link) %>		
+		</div>
+	</div>	
+</section>

@@ -1782,24 +1782,25 @@ ul.map-menu li:last-child {
    ========================================================================== */
 
 .contact label {
-    line-height: 30px;
+    line-height: 30px !important;
 }
 
 .contact input, .contact select, .contact textarea {
     border: 1px solid #ddd;
     background-color: #fafafa;
+    width: 100%;
 }
 
 .contact input:valid, .contact textarea:valid {
-    border-color: #5cb85c;
+    border-color: #5cb85c !important;
 }
 
 .contact input:hover, .contact select:hover, .contact textarea:hover {
-    border-color: rgb(238,78,68);
+    border-color: rgb(238,78,68) !important;
 }
 
 .contact input:focus, .contact select:focus, .contact textarea:focus {
-    background-color: #fff;
+    background-color: #fff !important;
 }
 
 .contact label {
@@ -1915,7 +1916,7 @@ ul.map-menu li:last-child {
    ========================================================================== */
 
 .social-wrapper {
-    background: url('../images/brands-pattern-bottom.png') no-repeat center bottom;
+    background: url('../assets/brands-pattern-bottom.png') no-repeat center bottom;
     position: relative;
     text-align: center;
     margin-top: 80px;
@@ -1924,7 +1925,7 @@ ul.map-menu li:last-child {
 
 
 .social-wrapper h2 {
-    background: url('../images/brands-pattern-top.png') no-repeat center top;
+    background: url('../assets/brands-pattern-top.png') no-repeat center top;
     font-size: 12px;
     line-height: 16px;
     color: #555;
@@ -2545,7 +2546,7 @@ footer {
     background: #222;
     color: #ccc;
     text-shadow: 0 1px 0 rgba(0,0,0,0.5);
-    height: 360px;
+    height: 18em;
 }
 
 footer p, footer span {
@@ -2567,17 +2568,17 @@ footer .footer-slogan:before, footer .footer-slogan:after {
     height: 2px;
     top: -2px;
     background-color: #fff;
-    -webkit-mask-image: url('../images/mask-arrow-top.png');
-    -moz-mask-image: url('../images/mask-arrow-top.png');
-    -o-mask-image: url('../images/mask-arrow-top.png');
-    mask-image: url('../images/mask-arrow-top.png');
+    -webkit-mask-image: url('../assets/mask-arrow-top.png');
+    -moz-mask-image: url('../assets/mask-arrow-top.png');
+    -o-mask-image: url('../assets/mask-arrow-top.png');
+    mask-image: url('../assets/mask-arrow-top.png');
 }
 
 footer .footer-slogan:after {
-    -webkit-mask-image: url('../images/mask-arrow-bottom.png');
-    -moz-mask-image: url('../images/mask-arrow-bottom.png');
-    -o-mask-image: url('../images/mask-arrow-bottom.png');
-    mask-image: url('../images/mask-arrow-bottom.png');
+    -webkit-mask-image: url('../assets/mask-arrow-bottom.png');
+    -moz-mask-image: url('../assets/mask-arrow-bottom.png');
+    -o-mask-image: url('../assets/mask-arrow-bottom.png');
+    mask-image: url('../assets/mask-arrow-bottom.png');
     top: auto;
     bottom: -2px;
 }
@@ -2591,7 +2592,7 @@ footer .footer-slogan h2 {
 }
 
 .footer-wrapper .footer-slogan .ribbon {
-    background: url('../images/logo.png') no-repeat center top;
+    background: url('../assets/gafitas.png') no-repeat center top;
     position: absolute;
     display: block;
     top: -35px;

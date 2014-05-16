@@ -2,7 +2,7 @@
 <div class="sign-in-page row">
   <div class="container sign-forms sign-up">
     <div>
-      <%= render 'shared/error_messages' %>
+      <%= render 'shared/error_messages', object: @user %>
       <h1>INGRESAR</h1>
 
       <%= render "form" %>
