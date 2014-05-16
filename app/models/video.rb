@@ -1,5 +1,6 @@
 class Video < ActiveRecord::Base
 
+	validates :subject,  presence: true, length: { maximum: 10}
 	YT_LINK_FORMAT = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/i
  	validates :link, presence: true, format: { with: YT_LINK_FORMAT, multiline: true }
 
