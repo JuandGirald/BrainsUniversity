@@ -1,12 +1,20 @@
 <% provide(:title, "Editar Usuario") %>
 <div class="sign-in-page row">
-  <div class="container sign-forms sign-up">
-    <div>
-      <%= render 'shared/error_messages' %>
-      <h1>Actualiza Tu Perfil</h1>
-      <%= render "form" %>
-      
-      <%= gravatar_for @user %>
-      <a href="http://gravatar.com/emails">change</a>
-  </div>
+	<% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+	<div class="container">
+		<div class="sign-forms sign-up">
+  		<div class="row">
+  			<%= render 'shared/error_messages', :object => @user%>
+      	<h1 class="top-margin"> <%= @user.name %> </h1>
+    		<h1 class="image-avatar">
+      		<img src="<%= gravatar_for @user %>" alt="<%= @user.name %>" class='gravatar'>
+    		</h1>
+    		<h1 class="change-avatar"><a href="http://gravatar.com/emails">change</a></h1> 
+	      	
+				<%= render "form" %>
+	  	</div>	
+  	</div>
+	</div>
 </div>

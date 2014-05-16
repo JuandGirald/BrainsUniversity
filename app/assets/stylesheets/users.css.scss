@@ -6,8 +6,12 @@
 
 // User-menu
 
+.user-menu1 {
+  margin-left: 60% ;
+}
+
 #user-menu {
-  width: 55%;
+  width: 55% ;
   li {
     float: right;
     a:hover{
@@ -29,7 +33,12 @@
   background-image: url(../assets/5.png);
   position: relative;
   background-size: cover;
-  height: 56em
+  height: 56em;
+  overflow: hidden;
+  .container
+  footer, .footer-copyright {
+    display: none !important;
+  }
 }
 
 .sign-forms {
@@ -153,13 +162,28 @@ aside {
   }
 }
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
+.image-avatar{
+  margin-bottom: 0;
+}
+
+h1.change-avatar{
+  margin-top: 0 !important;
+  a {
+    font-size: 14px;
+  }
 }
 
 /* Flash messages */
 
 .alert-error, .alert-danger{
   text-align: center;
+}
+
+// profile styles 
+
+.user-avatar {
+  margin: 0 auto;
+}
+.profile {
+  margin-top: 7em;
 }

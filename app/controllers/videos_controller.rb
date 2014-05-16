@@ -8,7 +8,11 @@ class VideosController < ApplicationController
 	end
 
 	def index
-  	@videos = Video.order('created_at DESC')
+  	if params[:subject].present?
+  		@videos = Video.calculo(params[:subject]) 
+  	else
+  		@videos = Video.order('created_at DESC')
+  	end
 	end
 
 	def show

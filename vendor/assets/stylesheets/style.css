@@ -734,8 +734,9 @@ nav .row [class*="col-"] {
     display: block;
     text-transform: uppercase;
     text-align: center;
-    font-weight: 300;
+    font-weight: bold;
     color: #666;
+    margin-top: 3em;
 }
 
 .title span { 

@@ -18,6 +18,44 @@
 		width: 100%;
 	}
 }
+.jumbotron {
+	.container.text-center{
+		h1{
+			font-size: 2em;
+		}
+	}
+}
+
+.filter-panel {
+	margin-bottom: 4em;
+	margin-top: 1em;
+}
+.button-search{
+	border-radius: 0 !important;
+	width: 18.6%;
+	margin-left: 1%;
+	a{
+		color: white;
+	}
+}
+.btn:hover.button-search {
+	color: white !important;
+}
+.btn:hover.purple {
+	background-color: #714185 !important;
+}
+.btn:hover.turquoise {
+	background-color: #47B88D !important;
+}
+.btn:hover.orange {
+	background-color: #EB6D61 !important;
+}
+.btn:hover.midnight {
+	background-color: #2E3C4B !important;
+}
+.btn:hover.blue {
+	background-color: #6194AC !important;
+}
 
 .new-video {
 	margin-top: 3em
