@@ -111,10 +111,20 @@
   
   
   <%= yield %>
-  <% if !current_page?('/signin') && !current_page?('/signup') && !current_page?(edit_user_path(current_user))%>
-    <%= render 'layouts/footer' %>
-  <% end %>  
-    
+
+  <% if signed_in? %>
+  
+    <% if !current_page?('/signin') && !current_page?('/signup') && !current_page?(edit_user_path(current_user))%>
+      <%= render 'layouts/footer' %>
+    <% end %>
+  <% else %>
+
+    <% if !current_page?('/signin') && !current_page?('/signup') %>
+      <%= render 'layouts/footer' %>
+    <% end %>
+  <% end %>
+        
+      
   <%= javascript_include_tag "library" %>
   <%= javascript_include_tag "scripts" %>
   
