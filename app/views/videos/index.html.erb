@@ -1,15 +1,15 @@
 <div class="jumbotron">
   
-	<% if current_user.admin?  %>
-											  
-	  <div class="container text-center">
-	    <h1>Share your videos with the world!</h1>
-	    <p>Click the button below to share your video from YouTube.</p>
-	    <p>
-	      <%= link_to 'Add video now!', new_video_path, class: 'btn btn-primary btn-lg' %>
-	    </p>
-	  </div>
-	<% end %>
+		
+		<% if signed_in? && current_user.admin?  %>
+		  <div class="container text-center">
+		    <h1>Share your videos with the world!</h1>
+		    <p>Click the button below to share your video from YouTube.</p>
+		    <p>
+		      <%= link_to 'Add video now!', new_video_path, class: 'btn btn-primary btn-lg' %>
+		    </p>
+		  </div>
+		<% end %>
 
 	<div class="container text-center">
 		<h1>Estos son los videos que hemos recopilado para tí, escoge la materia que necesites<%= @subject %></h1>	
@@ -57,7 +57,7 @@
 	                  <p>
 	                    <span class="fa fa-thumbs-up"></span> <%= video.likes %>
 	                    <span class="fa fa-thumbs-down"></span> <%= video.dislikes %>
-	                    <% if current_user.admin?  %>
+	                    <% if signed_in? && current_user.admin?  %>
 										    <%= link_to "delete", video, method: :delete,
 										                                  data: { confirm: "You sure?" } %>
 									  	<% end %>
