@@ -177,48 +177,61 @@
     </div>
     
     <div class="container">        
-        <h2 class="sub-title">
-            Tu opinión es importante para nosotros, cuéntanos tu experiencia con la plataforma, siempre estamos abiertos a sugerencias y criticas de nuestros usuarios. Con tu ayuda haremos de SolvingBooks la plataforma oficial de los estudiantes de ingeniería. 
-        </h2>
-        
-        <div class="row">
-            <div class="col-sm-8">
-                <form class="contact">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <label class="required" for="name">
-                                Tu Nombre
-                                <input type="text" name="name" id="name" placeholder="John Stuart" required>
-                            </label>
-                        </div>
-                        <div class="col-sm-6">
-                            <label class="required" for="email">
-                                Tu Correo
-                                <input type="email" name="email" id="email" placeholder="John@Stuart.com" required>
-                            </label>
-                        </div>
-                    </div>
-                    <label class="required">
-                        Mensaje
-                        <textarea rows="7" placeholder="I have an idea for a project..." required></textarea>
-                    </label>
-                    <div class="add-sm-top text-center">
-                        <button class="btn btn-danger" type="submit"><i class="fa fa-envelope"></i> &nbsp; ENVIAR E-MAIL</button>
-                    </div>
-                </form>
-            </div>
-            <div class="col-sm-4 contact-address">
-                <h3 class="heading turquoise add-xs-top">Mantente en contacto</h3>
-                <p>Si tienes una idea para mejorar la plataforma, o algún talento que crees que puede ayudar a SolvingBooks; queremos saber de ti.</p>
-                
-                <h3 class="heading blue add-sm-top">Dirección</h3>
-                <address><abbr title="Address"><i class="fa fa-thumb-tack"></i></abbr>Colombia<br />
-                                                - Prontamente</address>
-                <address><abbr title="Phone"><i class="fa fa-phone"></i></abbr>1.718.456.7890</address>
-                <address><abbr title="Fax"><i class="fa fa-print"></i></abbr>1.718.045.6789</address>
-                <address><abbr title="Email"><i class="fa fa-envelope"></i></abbr>support@solvingbooks.com</address>
-            </div>
-        </div>
+      <h2 class="sub-title">
+          Tu opinión es importante para nosotros, cuéntanos tu experiencia con la plataforma, siempre estamos abiertos a sugerencias de nuestros usuarios. Con tu ayuda haremos de SolvingBooks la plataforma oficial de los estudiantes de ingeniería. 
+      </h2>
+      
+      <div class="row">
+          <%= render 'shared/error_messages', object: @message %>
+          <% flash.each do |key, value| %>
+            <div class="alert alert-<%= key %>"><%= value %></div>
+          <% end %>
+          <div class="col-sm-8">
+            <form accept-charset="UTF-8" action="/" id="new_message" method="post" class="new_message contact">
+              <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+              <div class="row">
+                <div class="col-sm-6">
+                  <label class="required" for="name">
+                      Tu Nombre
+                      <input type="text" name="message[name]" id="message_name" placeholder="John Stuart" required>
+                  </label>
+                </div>
+                <div class="col-sm-6">
+                  <label class="required" for="email">
+                      Tu Correo
+                      <input type="email" name="message[email]" id="message_email" placeholder="John@Stuart.com" required>
+                  </label>
+                </div>
+              </div>
+               <div class="row">
+                <div class="col-sm-6">
+                  <label class="required" for="name">
+                      Asunto
+                      <input type="text" name="message[subject]" id="message_subject" placeholder="John Stuart" required>
+                  </label>
+                </div>
+              </div>
+              <label class="required">
+                Mensaje
+                <textarea id="message_body" name="message[body]" rows="7" placeholder="Tengo una idea para un proyecto..." required></textarea>
+              </label>
+              <div class="add-sm-top text-center">
+                <button class="btn btn-danger" type="submit"><i class="fa fa-envelope"></i> &nbsp; ENVIAR COREO</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-sm-4 contact-address">
+              <h3 class="heading turquoise add-xs-top">Mantente en contacto</h3>
+              <p>Si tienes una idea para mejorar la plataforma, o algún talento que crees que puede ayudar a SolvingBooks; queremos saber de ti.</p>
+              
+              <h3 class="heading blue add-sm-top">Dirección</h3>
+              <address><abbr title="Address"><i class="fa fa-thumb-tack"></i></abbr>Colombia<br />
+                                              - Prontamente</address>
+              <address><abbr title="Phone"><i class="fa fa-phone"></i></abbr>1.718.456.7890</address>
+              <address><abbr title="Fax"><i class="fa fa-print"></i></abbr>1.718.045.6789</address>
+              <address><abbr title="Email"><i class="fa fa-envelope"></i></abbr>support@solvingbooks.com</address>
+          </div>
+      </div>
     </div>
 </section>
 
