@@ -1791,6 +1791,9 @@ ul.map-menu li:last-child {
     background-color: #fafafa;
     width: 100%;
 }
+.contact input {
+    height: 3em;
+}
 
 .contact input:valid, .contact textarea:valid {
     border-color: #5cb85c !important;
