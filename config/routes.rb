@@ -12,7 +12,7 @@ SolvingBooks::Application.routes.draw do
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   match '/users',   to: 'users#show',           via: 'get'
   match '/videos',  to: 'user#index',           via: 'get'
-  
+  match '/',  to: 'static_pages#create',          via: 'post'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
