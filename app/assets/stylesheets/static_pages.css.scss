@@ -70,13 +70,13 @@ i.fa.fa-3x {
 
 
 .intro-container {
-  height: 25em;
   width: 100%;
   color: rgba(255,255,255,1);
   margin-left: 0;
   background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
   background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
   background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  
 }
 
 #home {
@@ -401,19 +401,44 @@ i.fa.fa-3x {
     margin-top: 2em;
   }
   .subject {
-    .video-subject{
-      margin-top: 2em;
-      margin-bottom: 2em;
-    }
     width: 24%;
     display: block;
     float: left;
+    margin-bottom: 6em;
+    @media (max-width: 800px) {
+      width: 48%;
+    }
     img{
       max-width: 90%;
+      margin-top: 2em;
     }
-    h4 {
-      font-weight: normal;
-      color: white;
+    h3 {
+      font-size: 2.5em;
+      a:hover {
+        color: #107399;
+      }
+    }
+    a{
+      font-family: "OpenSansBold",Helvetica,Arial,sans-serif;
+      color: #1CACE3; 
+      font-size: 100%; 
+    }
+    p {
+      margin-top: 1em;
+      margin-bottom: 2em;
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+    .btn-sticky{
+      margin-bottom: 2em;
+      margin-top: 1em;
+      border-radius: 3px;
+      padding: 20px 25px;
+      background: #1CACE3;
+      color: white; 
+    }
+    a:hover.btn-sticky{
+      background: #107399;
     }
   }
 }
@@ -436,7 +461,7 @@ MEDIA QUERIES FOR LARGER BREAKPOINTS BEGIN HERE
 - - - - - - - - - - - - - - - - - - - - - - - - */
 
 @media screen and (max-width: 800px) {
-  .intro-container.span12{
+  .intro-container.row{
     margin-left: 0;
   }
   .main-logo{
