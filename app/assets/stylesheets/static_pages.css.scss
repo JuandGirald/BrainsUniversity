@@ -403,7 +403,7 @@ i.fa.fa-3x {
     display: block;
     float: left;
     margin-bottom: 6em;
-    @media (max-width: 800px) {
+    @media (max-width: 1150px) {
       width: 48%;
     }
     img{
@@ -411,7 +411,7 @@ i.fa.fa-3x {
       margin-top: 2em;
     }
     h3 {
-      font-size: 2.5em;
+      font-size: 2em;
       a:hover {
         color: #107399;
       }
