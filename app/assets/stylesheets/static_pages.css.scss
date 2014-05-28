@@ -30,6 +30,12 @@ i.fa.fa-3x {
 .fa-sign-in{
   margin-left: 22% !important;
 }
+.fa-facebook{
+  color: #34495e !important;
+}
+.fa-google-plus {
+  color: #EE4E44 !important;
+}
 
 #video-menu {
   width: 12.6%;
@@ -300,6 +306,9 @@ i.fa.fa-3x {
     -webkit-border-radius: 13em;
     -moz-border-radius: 13em;
     border-radius: 13em;
+     -webkit-filter: grayscale(85%);
+    -moz-filter: grayscale(85%);
+    filter: grayscale(85%);
   }
 }
 // .member:hover {
@@ -343,6 +352,7 @@ i.fa.fa-3x {
 }
 .testimonial {
   overflow: hidden;
+  text-align: center;
 }
 .testimonial img {
   width: 75px;
@@ -431,9 +441,10 @@ i.fa.fa-3x {
       margin-bottom: 2em;
       margin-top: 1em;
       border-radius: 3px;
-      padding: 20px 25px;
+      padding: 15px 25px;
       background: #1CACE3;
       color: white; 
+      width: 94%;
     }
     a:hover.btn-sticky{
       background: #107399;
