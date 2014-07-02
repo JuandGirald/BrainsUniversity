@@ -73,8 +73,8 @@
         </div>
         <ul id="video-menu">
           <li class="col-sm-2 videos">
-            <%= link_to videos_path do %>
-              <i class="fa fa-youtube-play fa-3x"></i> Videos
+            <%= link_to signin_path do %>
+              <i class="fa fa-sign-in fa-3x"></i> Ingresar
             <% end %>
             
           </li>
@@ -82,7 +82,6 @@
       <% else %>
         <% if signed_in? %>
           <ul class="user-menu1">
-            <li class="col-sm-2"><a href="/videos"><i class="fa fa-youtube-play fa-3x"></i> Videos</a></li>
             <li class="col-sm-2">
               <%= link_to edit_user_path(current_user) do %>
                 <i class="fa fa-male fa-3x"></i> <%= @current_user.name.split[0..1].join(' ') %>
@@ -97,7 +96,6 @@
         <% else %>
           <ul id="user-menu">
             <li class="col-sm-2 "><a href="/signin"><i class="fa fa-sign-in fa-3x"></i>Ingresar</a></li>
-            <li class="col-sm-2"><a href="/videos"><i class="fa fa-youtube-play fa-3x"></i> Videos</a></li>
           </ul>
         <% end %>
         
