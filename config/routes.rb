@@ -1,9 +1,6 @@
 SolvingBooks::Application.routes.draw do
   match '/home',  to: 'static_pages#home',       via: 'get'
-  get "static_pages/home"
-  get "static_pages/help"
-
-
+  
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :videos, only: [:index, :new, :create, :show]
@@ -12,7 +9,12 @@ SolvingBooks::Application.routes.draw do
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   match '/users',   to: 'users#show',           via: 'get'
   match '/videos',  to: 'user#index',           via: 'get'
-  match '/',  to: 'static_pages#create',          via: 'post'
+  match '/about',   to: 'static_pages#about',  via: 'get'
+  match '/contact', to: 'static_pages#contact',  via: 'get'
+
+
+  match '/contact',  to: 'static_pages#create',        via: 'post'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

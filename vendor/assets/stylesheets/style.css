@@ -663,8 +663,7 @@ nav.full {
             }
 
             nav ul li a:hover {
-                background-color: #0066cc;
-                color: #fff;   
+                color: #3355A5;   
             }
             nav ul li.active a i {
                 color: white !important;
