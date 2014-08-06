@@ -88,7 +88,7 @@ i.fa.fa-3x {
 
 #home {
 	background-color: #D1E2E4;
-	background: url(../assets/5.png);
+	background: url(../assets/5.png) fixed;
   position: relative;
  	background-size: cover;
 }
@@ -393,15 +393,15 @@ i.fa.fa-3x {
 
 
 #subjects{
-  // background: url(../assets/stuff.jpg) fixed;
-  background: #e4e3d5;
+  background: url(../assets/banner.jpg) center center;
+  // background: #e4e3d5;
   background-size: cover;
   padding-top: 10px;
   .dot-bg{
     margin-bottom: 1.5em;
   }
   h1{
-    color: #636365;
+    color: #339999;
     font-size: 2.2em;
     font-weight: 100;
     margin-top: 1.8em;
@@ -420,13 +420,18 @@ i.fa.fa-3x {
     float: left;
     margin-bottom: 6em;
     margin-right: 1%;
-    background: white;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
     @media (max-width: 1150px) {
       width: 47.8%;
     }
+    .subject-container {
+      background: white;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+    .ripped {
+      margin-top: 0;
+      width: 100%;
+    }
     img{
-      max-width: 90%;
       margin-top: 2em;
     }
     h3 {
@@ -455,6 +460,11 @@ i.fa.fa-3x {
       width: 94%;
     }
   }
+}
+
+
+.suject_logo {
+
 }
 
 .subject.text-center.intro-container {
