@@ -13,10 +13,6 @@
  *= require font-awesome
  *= require animate
  *= require jquery.ui.all
- *= require	fancybox/source/jquery.fancybox
- *= require	fancybox/source/helpers/jquery.fancybox-thumbs
- *= require	fancybox/source/helpers/jquery.fancybox-buttons
- 
  *= require bootstrap.min
  *= require normalize-rails
  *= require picons

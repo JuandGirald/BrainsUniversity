@@ -18,11 +18,6 @@
 //= require jquery.cycle2.all
 //= require jquery.scrollTo.min
 //= require jquery.scrollTo
-//= require fancybox/lib/jquery.mousewheel-3.0.6.pack
-//= require fancybox/source/jquery.fancybox.pack
-//= require fancybox/source/helpers/jquery.fancybox-media
-//= require fancybox/source/helpers/jquery.fancybox-buttons
-//= require fancybox/source/helpers/jquery.fancybox-thumbs
 //= require bootstrap.min
 //= require jquery.lazyload
 //= require modernizr.custom

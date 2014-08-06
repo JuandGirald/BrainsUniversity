@@ -414,6 +414,9 @@ i.fa.fa-3x {
   .container{
     margin-top: 2em;
   }
+  .subject.lineal{
+    float: right;
+  }
   .subject {
     width: 24%;
     display: block;
@@ -447,7 +450,7 @@ i.fa.fa-3x {
     p {
       color: #636365;
       margin-top: 1em;
-      margin-bottom: 2em;
+      margin-bottom: 0;
       margin-left: 1em;
       margin-right: 1em;
     }
