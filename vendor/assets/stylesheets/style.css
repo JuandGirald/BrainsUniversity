@@ -688,7 +688,7 @@ nav.affix {
 nav.affix ul li a, nav.affix ul li a:visited {
     font-family: 'Duru Sans', sans-serif;
     height: 70px;
-    line-height: 40px;
+    line-height: 70px;
 }
 
 /*** Navigation for Mobile Devices ***/
