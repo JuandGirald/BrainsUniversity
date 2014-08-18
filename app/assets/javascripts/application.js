@@ -22,7 +22,6 @@
 //= require jquery.lazyload
 //= require modernizr.custom
 //= require library
-//= require scripts
 //= require_tree .
 
 //= require turbolinks

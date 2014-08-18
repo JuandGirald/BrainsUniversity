@@ -43,7 +43,7 @@
     <div class="container">
       <div class="logo pull-left">
         <%= link_to '', root_path %>
-        <a class="home_link" href="">
+        <a class="home_link" href="/">
           <img src="/assets/TopLogo.png" alt="Main Logo" >
         </a>  
       </div>
@@ -51,20 +51,17 @@
   
         <div class="row">
           <ul id="top-menu">
-            <li class="col-sm-1 active"><a href="#top"><i class="fa fa-chevron-up"></i><span class="hidden">Top</span></a></li>
-            <li class="col-sm-2"><a href="#subjects"> Materias</a></li>
-            <li class="col-sm-2"><a href="#"> Creadores</a></li>
-            <li class="col-sm-2"><a href="#">  Contactos</a></li>
+            <li class="col-sm-2"><a href=""> Materias</a></li>
+            <li class="col-sm-2"><a href="/about"> Creadores</a></li>
+            <li class="col-sm-2"><a href="/contact">  Contactos</a></li>
+            <li class="col-sm-2 videos">
+              <%= link_to signin_path do %>
+                 Ingresar
+              <% end %>
+              
+            </li>
           </ul>
         </div>
-        <ul id="video-menu">
-          <li class="col-sm-2 videos">
-            <%= link_to signin_path do %>
-               Ingresar
-            <% end %>
-            
-          </li>
-        </ul>
       <% else %>
         <% if signed_in? %>
           <ul class="user-menu1">
@@ -105,15 +102,6 @@
     <% end %>
   <% end %>
         
-      
-  <%= javascript_include_tag "library" %>
-  <%= javascript_include_tag "scripts" %>
-  
-  <script>
-    $(function() {
-        Grid.init();
-    });
-  </script>
   <%= render 'layouts/analytics' %>
 </body>
 </html>
