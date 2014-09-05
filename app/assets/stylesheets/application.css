@@ -12,7 +12,6 @@
  *= require_tree .
  *= require font-awesome
  *= require animate
- *= require jquery.ui.all
  *= require bootstrap.min
  *= require normalize-rails
  *= require picons

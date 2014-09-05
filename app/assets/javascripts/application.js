@@ -13,7 +13,6 @@
 
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.all
 //= require jquery.cycle2
 //= require jquery.cycle2.all
 //= require jquery.scrollTo.min
