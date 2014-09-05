@@ -1,8 +1,8 @@
 class SessionsController < ApplicationController
 
 	def new
-		
-	end
+    redirect_to edit_user_path(@current_user) if signed_in?
+  end
 
 	def create
     user = User.find_by(email: params[:session][:email].downcase)

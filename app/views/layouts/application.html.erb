@@ -47,24 +47,16 @@
           <img src="/assets/TopLogo.png" alt="Main Logo" >
         </a>  
       </div>
-      <% if current_page?('/')  %>
-  
-        <div class="row">
-          <ul id="top-menu">
-            <li class="col-sm-2"><a href="#subjects"> Materias</a></li>
-            <li class="col-sm-2"><a href="/about"> Creadores</a></li>
-            <li class="col-sm-2"><a href="/contact">  Contactos</a></li>
+      <div class="row">
+        <ul id="top-menu">
+          <li class="col-sm-2"><a href="#subjects"> Materias</a></li>
+          <li class="col-sm-2"><a href="/about"> Creadores</a></li>
+          <li class="col-sm-2"><a href="/contact">  Contactos</a></li>
+          <% if !signed_in? %>
             <li class="col-sm-2 videos">
-              <%= link_to signin_path do %>
-                 Ingresar
-              <% end %>
-              
+              <%= link_to 'Ingresar', signin_path %>
             </li>
-          </ul>
-        </div>
-      <% else %>
-        <% if signed_in? %>
-          <ul class="user-menu1">
+          <% else %>
             <li class="col-sm-2">
               <%= link_to edit_user_path(current_user) do %>
                 <%= @current_user.name.split[0..1].join(' ') %>
@@ -75,15 +67,9 @@
                 Salir
               <% end %>
             </li>
-          </ul> 
-        <% else %>
-          <ul id="user-menu">
-            <li class="col-sm-2 "><a href="/signin"></i>Ingresar</a></li>
-          </ul>
-        <% end %>
-        
-      <% end %>
-  
+          <% end %>
+        </ul>
+      </div>    
     </div>
   </nav>
   
