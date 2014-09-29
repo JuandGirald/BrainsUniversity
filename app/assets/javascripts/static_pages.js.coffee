@@ -9,17 +9,6 @@ $(document).ready ->
 	bw = 100 / bc
 	$("#nav-boxes div a").css "width", bw + "%"
 
-	#fancy box
-
-	$(".fancybox-media").fancybox
-		openEffect: "none"
-		closeEffect: "none"
-		helpers:
-			media: {}
-
-	return
-
-
 	
 	#pop-up videos
 	# nav box hover

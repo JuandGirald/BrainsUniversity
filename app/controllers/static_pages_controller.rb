@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-  	@message = Message.new
+  	
   end
 
   def create
@@ -15,8 +15,10 @@ class StaticPagesController < ApplicationController
     end
   end
 
-  def help
+  def contact
+    @message = Message.new
   end
+
   private
 
   	def message_params

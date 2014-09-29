@@ -14,27 +14,15 @@ section{
 	}
 }
 
+nav {
+  overflow: hidden;
+}
+
 i.fa.fa-3x {
   color: #0066cc;
   display: block;
   margin-left: 40%;
   padding-top: 3px;
-}
-.fa-youtube-play,
-.fa.fa-male{
-  margin-left: 34% !important;
-}
-.fa-book{
-  margin-left: 36% !important;
-}
-.fa-sign-in{
-  margin-left: 22% !important;
-}
-.fa-facebook{
-  color: #34495e !important;
-}
-.fa-google-plus {
-  color: #EE4E44 !important;
 }
 
 #video-menu {
@@ -414,6 +402,9 @@ i.fa.fa-3x {
   .container{
     margin-top: 2em;
   }
+  .subject.lineal{
+    float: right;
+  }
   .subject {
     width: 24%;
     display: block;
@@ -422,17 +413,28 @@ i.fa.fa-3x {
     margin-right: 1%;
     @media (max-width: 1150px) {
       width: 47.8%;
+      img.ll{
+      width: 40% !important;
+      }
     }
     .subject-container {
       background: white;
       box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+      a {
+        color: black;
+      }
     }
     .ripped {
       margin-top: 0;
-      width: 100%;
+      width: 100.4%;
+    }
+    .ripped, .construction, .subject-container {
+      position: relative;
+      z-index: 1;
     }
     img{
       margin-top: 2em;
+      width: 60%;
     }
     h3 {
       font-size: 2em;
@@ -447,7 +449,7 @@ i.fa.fa-3x {
     p {
       color: #636365;
       margin-top: 1em;
-      margin-bottom: 2em;
+      margin-bottom: 0;
       margin-left: 1em;
       margin-right: 1em;
     }
@@ -459,12 +461,15 @@ i.fa.fa-3x {
       color: white; 
       width: 94%;
     }
+    .termo {
+      a {
+        color: #009F9A;
+      }
+      a:hover {
+        color: #018884;
+      }
+    }
   }
-}
-
-
-.suject_logo {
-
 }
 
 .subject.text-center.intro-container {
@@ -477,6 +482,14 @@ i.fa.fa-3x {
   input#email {
   height: 4em;
   font-size: 1em;
+  }
+}
+
+// Footers
+.footer-wrapper {
+  img{
+    float: right;
+    width: 80%;
   }
 }
 
