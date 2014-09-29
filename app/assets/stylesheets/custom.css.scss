@@ -15,11 +15,66 @@ footer {
   border-top: 1px solid $grayMediumLight;
   background-color: #333333;
   height: 8em;
-  .glass{
-	  margin-top: 0.5em;
-	  float: right;
-	  width: 11em;
+  .top {
+    margin-top: 2em;
   }
+  .glass{
+	  margin-top: 0.5em !important;
+	  float: right;
+    img {
+      opacity: 0.5;
+      -webkit-transition: all 0.15s ease-in-out;
+      -moz-transition: all 0.15s ease-in-out;
+      -o-transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out;
+    }
+    img:hover {
+      opacity: 1.0;
+    }
+  }
+  ul {
+    list-style: none;
+    li {
+      margin-bottom: 0.5em;
+      a {
+        color: rgba(255,255,255,0.5) !important;
+      }
+    }
+  }
+  .social {
+    margin-left: 20%;
+    div {
+      float: left;
+      margin-right: 2em;
+      position: relative;
+      a {
+        opacity: 0.5;
+        color: #8C8F92;
+        font-size: 2em;
+      }
+      a:hover {
+        opacity: 1;
+      }
+      img {
+        opacity: 0.5;
+        -webkit-transition: all 0.15s ease-in-out;
+        -moz-transition: all 0.15s ease-in-out;
+        -o-transition: all 0.15s ease-in-out;
+        transition: all 0.15s ease-in-out;
+      }
+      img:hover {
+        opacity: 1.0;
+      }
+    }
+  }
+}
+
+//Universal
+
+.underline {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding-bottom: 2px;
 }
 
 .red_color {
