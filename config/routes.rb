@@ -1,16 +1,17 @@
 SolvingBooks::Application.routes.draw do
-  match '/home',  to: 'static_pages#home',       via: 'get'
   
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :videos, only: [:index, :new, :create, :show]
+  
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   match '/users',   to: 'users#show',           via: 'get'
   match '/videos',  to: 'user#index',           via: 'get'
-  match '/about',   to: 'static_pages#about',  via: 'get'
-  match '/contact', to: 'static_pages#contact',  via: 'get'
+  match '/about',   to: 'static_pages#about',   via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/modulos', to: 'modules#index',        via: 'get'
 
 
   match '/contact',  to: 'static_pages#create',        via: 'post'
