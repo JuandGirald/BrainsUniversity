@@ -618,11 +618,6 @@ nav.full {
             height: 60px;
         }
 
-            nav ul li.active a {
-                background-color: #0066cc;
-                color: #FFF !important;
-            }
-        
             nav ul li a, nav ul li a:visited {
                 font-family: 'Duru Sans', sans-serif;
                 display: block;
@@ -636,16 +631,7 @@ nav.full {
                 color: #666;
                 text-align: center;
             }
-
-            nav ul li a:active,
-            nav ul li:nth-child(2) > a:active,
-            nav ul li:nth-child(3) > a:active,
-            nav ul li:nth-child(4) > a:active {
-                color: #FFF;
-                background-color: #555;
-                text-shadow:0px 1px 0px rgba(255,255,255,0.1);
-            }
-
+            
             nav ul li a i {
                 font-size: 14px;
                 display: inline-block;
