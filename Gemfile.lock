@@ -86,8 +86,6 @@ GEM
       railties (>= 3.2.16)
     json (1.8.1)
     jwt (1.0.0)
-    lazyload-rails (0.2.0)
-      nokogiri (~> 1.5)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -225,7 +223,6 @@ DEPENDENCIES
   jquery-rails
   jquery-scrollto-rails
   jquery-ui-rails
-  lazyload-rails
   normalize-rails
   pg
   rails (= 4.0.1)

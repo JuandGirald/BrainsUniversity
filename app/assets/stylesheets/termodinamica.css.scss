@@ -1,0 +1,89 @@
+// Termo Module Styles
+
+.unidad-3 {
+  background: url('../assets/unidad3.png');
+}
+.unidad-2 {
+  background: url('../assets/unidad2.png');
+}
+
+.unidad {
+  margin-bottom: 2em;
+  height: 9em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  img {
+    width: 100%;
+  }
+}
+
+.unidad-icon {
+  top: 9%;
+  right: 3.6%;
+  width: 25.5% !important;
+}
+
+@media (max-width: 1024px) {
+  .unidad-icon {
+    top: 10%;
+    right: 5%;
+  }
+}
+.unit-text {
+  color: #fff;
+  right: 3%;
+  h3 {
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 0.8em;
+  }
+  @media (max-width: 1024px) {
+    h3 {
+      margin-top: 1em;
+    }
+    p {
+      display: none;
+    }
+  }
+}
+
+.recomendados {
+  margin-top: 2em;
+  background-color: #DDDBC9;
+  h1 {
+    color: #373838;
+    padding-top: 1em;
+  }
+  p {
+    margin-bottom: 2em;
+  }
+  .icon-recomen {
+    margin-bottom: 2em;
+    p {
+      font-size: 0.8em;
+    }
+    img {
+      width: 100%;
+    }
+    .icon-nuevo {
+      position: absolute;
+      left: 20%;
+      top: 14%;
+      width: 60%;
+    }
+    .recom-text {
+      padding-left: 0;
+    }
+  }
+}
+
+hr {
+  display: block !important;
+  height: 1px !important;
+  border: 0 !important;
+  border-top: 2px solid #0C0C0C !important;
+  margin-bottom: 0 !important;
+}

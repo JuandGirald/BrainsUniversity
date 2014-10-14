@@ -3,6 +3,11 @@ SolvingBooks::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :videos, only: [:index, :new, :create, :show]
+  resources :modulos, only: [:index] do
+    collection do
+      get 'termodinamica'
+    end
+  end
   
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
@@ -11,8 +16,7 @@ SolvingBooks::Application.routes.draw do
   match '/videos',  to: 'user#index',           via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
-  match '/modulos', to: 'modules#index',        via: 'get'
-
+  
 
   match '/contact',  to: 'static_pages#create',        via: 'post'
 
