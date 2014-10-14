@@ -18,7 +18,6 @@
 //= require jquery.scrollTo.min
 //= require jquery.scrollTo
 //= require bootstrap.min
-//= require jquery.lazyload
 //= require modernizr.custom
 //= require library
 //= require_tree .

@@ -66,8 +66,6 @@ gem "jquery-scrollto-rails"
 
 gem 'bootstrap-sass', '~> 3.0.3.0'
 
-gem "lazyload-rails"
-
 gem 'simple_form'
 
 # Video Gem
