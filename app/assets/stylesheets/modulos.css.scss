@@ -42,6 +42,10 @@
   background: url('../assets/banner-termo.png');
   background-size: cover;
 }
+.estatica-banner {
+  background: url('../assets/banner-estatica.png');
+  background-size: cover;
+}
 
 .banner {
   color: #fff;
@@ -87,9 +91,11 @@
 .termo-module::before {
   background: #009F9A;
 }
-
 .construction-module::before {
-  background: #cc3333;
+  background: #123E6F;
+}
+.estatica-module::before {
+  background: #9F1915;
 }
 
 

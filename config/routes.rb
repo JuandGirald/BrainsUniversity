@@ -6,6 +6,7 @@ SolvingBooks::Application.routes.draw do
   resources :modulos, only: [:index] do
     collection do
       get 'termodinamica'
+      get 'estatica'
     end
   end
   
