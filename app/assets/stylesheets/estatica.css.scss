@@ -23,16 +23,29 @@
 }
 
 #estatica {
-  font-family: 'DK Crayon Crumble' !important;
+  font-family: "tiza" !important;
+  font-weight: normal;
   .unidad-icon {
     top: 33%;
     left: 1.2%;
     width: 16% !important;
   }
   .unit-text {
+    font-family: "DK Crayon Crumble" !important;
     margin-left: 4%;
     left: 0;
+    h3 {
+      font-size: 1.8em;
+      margin-top: 1.5em;
+      margin-bottom: 5px;
+    }
   } 
+  .sub-content {
+    font-family: "DK Crayon Crumble" !important;
+    p {
+      font-size: 100%
+    }
+  }
   .wheel {
     top: 24%;
     left: 1.6%;
