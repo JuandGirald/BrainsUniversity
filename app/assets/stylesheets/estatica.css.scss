@@ -1,0 +1,41 @@
+// Estatica module styles 
+
+.background-estatica3{
+  background: url('../assets/estatica/submodulo3.png');
+}
+.background-estatica4 {
+  background: url('../assets/estatica/submodulo4.png');
+}
+.background-estatica2 {
+  background: url('../assets/estatica/submodulo22.png');
+}
+.background-estatica1 {
+  background: url('../assets/estatica/submodulo1.png');
+}
+.background-estatica5 {
+  background: url('../assets/estatica/submodulo5.png');
+}
+.background-estatica6 {
+  background: url('../assets/estatica/submodulo6.png');
+}
+.background-estatica7 {
+  background: url('../assets/estatica/submodulo7.png');
+}
+
+#estatica {
+  font-family: 'DK Crayon Crumble' !important;
+  .unidad-icon {
+    top: 33%;
+    left: 1.2%;
+    width: 16% !important;
+  }
+  .unit-text {
+    margin-left: 4%;
+    left: 0;
+  } 
+  .wheel {
+    top: 24%;
+    left: 1.6%;
+    width: 15% !important;
+  }
+}
