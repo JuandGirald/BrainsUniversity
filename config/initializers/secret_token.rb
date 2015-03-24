@@ -24,4 +24,4 @@ def secure_token
   end
 end
 
-SolvingBooks::Application.config.secret_key_base = secure_token
+BrainsUniversity::Application.config.secret_key_base = secure_token
