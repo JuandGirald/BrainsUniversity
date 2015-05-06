@@ -7,6 +7,7 @@
 
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,100italic,100&subset=all' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Duru+Sans&subset=all' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Amaranth:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
   <!-- Youtube api -->
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -40,34 +41,32 @@
 <body id="top">
   <nav>
     <div class="container">
-      <div class="logo pull-left">
+      <div class="logo pull-left col-xs-4">
         <a class="home_link" href="/">
           <img src="/assets/brains_logo.png" alt="Main Logo" >
         </a>  
       </div>
-      <div class="row">
-        <ul id="top-menu">
-          <li class="col-sm-2"><a href="/modulos"> Materias</a></li>
-          <li class="col-sm-2"><a href="/about"> Creadores</a></li>
-          <li class="col-sm-2"><a href="/contact">  Contactos</a></li>
-          <% if !signed_in? %>
-            <li class="col-sm-2 videos">
-              <%= link_to 'Ingresar', signin_path %>
-            </li>
-          <% else %>
-            <li class="col-sm-2">
-              <%= link_to edit_user_path(current_user) do %>
-                <%= @current_user.name.split[0..1].join(' ') %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to signout_path, method: "delete", :class => "col-sm-2" do %>
-                Salir
-              <% end %>
-            </li>
-          <% end %>
-        </ul>
-      </div>    
+      <ul class="col-xs-8 navbar-right" id="top-menu">
+        <% if !signed_in? %>
+          <li class="videos">
+            <%= link_to 'Ingresar', signin_path %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to signout_path, method: "delete" do %>
+              Salir
+            <% end %>
+          </li>
+          <li>
+            <%= link_to edit_user_path(current_user) do %>
+              <%= @current_user.name.split[0..1].join(' ') %>
+            <% end %>
+          </li>
+        <% end %>
+        <li><a href="/modulos"> Materias</a></li>
+        <li><a href="/about"> Creadores</a></li>
+        <li><a href="/contact">  Contactos</a></li>
+      </ul>    
     </div>
   </nav>
   

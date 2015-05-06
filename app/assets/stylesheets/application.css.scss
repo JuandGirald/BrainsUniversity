@@ -10,15 +10,15 @@
  *
  *= require_self
  *= require_tree .
- *= require font-awesome
  *= require animate
- *= require bootstrap.min
  *= require normalize-rails
- *= require picons
- *= require style
-
+ 
  */
 
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
 
 @font-face {
   font-family: "DK Crayon Crumble";

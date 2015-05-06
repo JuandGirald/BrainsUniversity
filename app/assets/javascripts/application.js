@@ -12,12 +12,12 @@
 //
 
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require jquery.cycle2
 //= require jquery.cycle2.all
 //= require jquery.scrollTo.min
 //= require jquery.scrollTo
-//= require bootstrap.min
 //= require modernizr.custom
 //= require library
 //= require_tree .

@@ -611,11 +611,12 @@ nav.full {
         padding: 0;
         height: 60px;
         width: 80%;
-        margin-left: 45%;
     }
     
         nav ul li {
             height: 60px;
+            float: right;
+            margin-left: 3em;
         }
 
             nav ul li a, nav ul li a:visited {

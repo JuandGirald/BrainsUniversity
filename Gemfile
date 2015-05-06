@@ -58,13 +58,11 @@ gem 'normalize-rails'
 gem "animate-rails"
 gem "animatecss", "~> 0.0.4"
 
-gem "twitter-bootstrap-rails"
-
 gem 'cycle2-rails', git: 'git://github.com/thinkswan/cycle2-rails.git', branch: 'rails4'
 
 gem "jquery-scrollto-rails"
 
-gem 'bootstrap-sass', '~> 3.0.3.0'
+gem 'bootstrap-sass', '~> 3.3.4'
 
 gem 'simple_form'
 
