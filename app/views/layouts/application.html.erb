@@ -2,6 +2,9 @@
 <html>
 <head>
   <title> <%= full_title(yield(:title)) %> </title>
+  <!-- Gmail Validation Meta-->
+  <meta name="google-site-verification" content="DZBV29_3nAehejcEOjqfcua_vgqZvOfblDU19S2G4HQ" />
+
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
@@ -19,14 +22,12 @@
 
   <!-- Le CSS
     ================================================== -->
-  <%= stylesheet_link_tag    "bootstrap.min" %>
   <%= stylesheet_link_tag    "picons" %>
   <%= stylesheet_link_tag    "style" %>
   
   <!-- Js -->
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <%= javascript_include_tag "modernizr.custom" %>
-  <%= javascript_include_tag "bootstrap.min" %>
   
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
