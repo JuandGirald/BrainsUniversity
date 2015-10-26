@@ -46,3 +46,17 @@
     }
   }
 }
+
+@media only screen and (max-device-width: 480px) {
+  #landing {
+    .content {
+      top: 37%;
+      left: 15%;
+      width: 61% !important;
+      .subscriber {
+        margin-top: 2em;
+        width: 100%;
+      }
+    }
+  }
+}
