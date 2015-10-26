@@ -1,7 +1,7 @@
 class VideosController < ApplicationController
 
 	before_action :set_user, only: [:show, :edit, :update, :destroy]
-	before_action :admin_user,     only: [:create, :new]
+	# before_action :admin_user,     only: [:create, :new]
 
 
 	def new

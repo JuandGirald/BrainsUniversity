@@ -40,47 +40,50 @@
 </head>
 
 <body id="top">
-  <nav>
-    <div class="container">
-      <div class="logo pull-left col-xs-4">
-        <a class="home_link" href="/">
-          <img src="/assets/brains_logo.png" alt="Main Logo" >
-        </a>  
+
+  <% if !current_page?(root_path) %>
+    <nav>
+      <div class="container">
+        <div class="logo pull-left col-xs-4">
+          <a class="home_link" href="/">
+            <img src="/assets/brains_logo.png" alt="Main Logo" >
+          </a>  
+        </div>
+        <ul class="col-xs-8 navbar-right" id="top-menu">
+          <% if !signed_in? %>
+            <li class="videos">
+              <%= link_to 'Ingresar', signin_path %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to signout_path, method: "delete" do %>
+                Salir
+              <% end %>
+            </li>
+            <li>
+              <%= link_to edit_user_path(current_user) do %>
+                <%= @current_user.name.split[0..1].join(' ') %>
+              <% end %>
+            </li>
+          <% end %>
+          <li><a href="/modulos"> Materias</a></li>
+          <li><a href="/about"> Creadores</a></li>
+          <li><a href="/contact">  Contactos</a></li>
+        </ul>    
       </div>
-      <ul class="col-xs-8 navbar-right" id="top-menu">
-        <% if !signed_in? %>
-          <li class="videos">
-            <%= link_to 'Ingresar', signin_path %>
-          </li>
-        <% else %>
-          <li>
-            <%= link_to signout_path, method: "delete" do %>
-              Salir
-            <% end %>
-          </li>
-          <li>
-            <%= link_to edit_user_path(current_user) do %>
-              <%= @current_user.name.split[0..1].join(' ') %>
-            <% end %>
-          </li>
-        <% end %>
-        <li><a href="/modulos"> Materias</a></li>
-        <li><a href="/about"> Creadores</a></li>
-        <li><a href="/contact">  Contactos</a></li>
-      </ul>    
-    </div>
-  </nav>
+    </nav>
+  <%  end %>
   
   <%= yield %>
 
   <% if signed_in? %>
   
-    <% if !current_page?('/signin') && !current_page?('/signup') && !current_page?(edit_user_path(current_user))%>
+    <% if !current_page?(root_path) && !current_page?('/signin') && !current_page?('/signup') && !current_page?(edit_user_path(current_user))%>
       <%= render 'layouts/footer' %>
     <% end %>
   <% else %>
 
-    <% if !current_page?('/signin') && !current_page?('/signup') %>
+    <% if !current_page?(root_path) && !current_page?('/signin') && !current_page?('/signup') %>
       <%= render 'layouts/footer' %>
     <% end %>
   <% end %>

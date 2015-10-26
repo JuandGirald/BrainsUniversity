@@ -1,0 +1,48 @@
+#landing {
+  background-image: url('landing/landing4.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #01B0CF;
+  height: 100%;
+  width: 100vw;
+  .content {
+    position: absolute;
+    top: 28%;
+    left: 58%;
+  }
+}
+
+.subscriber {
+  float: right;
+  padding-right: 0;
+  .mc-field-group {
+    width: 100% !important;
+    label {
+      font-size: 21px;
+      margin-bottom: 12px !important;
+    }
+  }
+}
+
+#mc_embed_signup {
+  background: transparent !important;
+  color: white;
+  font-family: 'Amaranth', sans-serif !important;
+  .mc-field-group {
+    input {
+      border-radius: 8px;
+      color: #365365;
+    }
+    div.mce_inline_error {
+      background-color: #CB5028;
+    }
+  }
+  .clear {
+    input {
+      background-color: #CB5028;
+    }
+    input:hover {
+      background-color: #CB2828;
+    }
+  }
+}

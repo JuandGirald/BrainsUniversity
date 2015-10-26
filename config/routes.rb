@@ -17,6 +17,7 @@ BrainsUniversity::Application.routes.draw do
   match '/videos',  to: 'user#index',           via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/landing', to: 'static_pages#landing', via: 'get'
   
 
   match '/contact',  to: 'static_pages#create',        via: 'post'
@@ -25,7 +26,7 @@ BrainsUniversity::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'static_pages#home'
+   root 'static_pages#landing'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

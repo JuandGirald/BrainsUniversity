@@ -12,7 +12,9 @@
  *= require_tree .
  *= require animate
  *= require normalize-rails
- 
+ *= require picons
+ *= require style
+
  */
 
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
