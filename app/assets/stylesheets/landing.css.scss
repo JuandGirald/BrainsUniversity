@@ -24,6 +24,35 @@
   }
 }
 
+#landing-footer {
+  height: 11em;
+  border: none;
+  .social {
+    margin-left: 35%;
+  }
+  .glass img {
+    width: 36% !important;
+    margin-right: 3em;
+  }
+  .top.logo {
+    img {
+      width: 80%;
+      float: none;
+      margin-top: 1em;
+    }
+  }
+  .top {
+    margin-top: 0.5em;
+  }
+  .barra_colciencias {
+    text-align: center;
+    img {
+      width: 92% !important;   
+      float: none;
+    }
+  }
+}
+
 #mc_embed_signup {
   background: transparent !important;
   color: white;
