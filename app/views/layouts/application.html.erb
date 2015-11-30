@@ -85,7 +85,6 @@
             </li>
           <% end %>
           <li><a href="/modulos"> Materias</a></li>
-          <li><a href="/about"> Creadores</a></li>
           <li><a href="/contact">  Contactos</a></li>
         </ul>    
       </div>
@@ -101,7 +100,7 @@
     <% end %>
   <% else %>
 
-    <% if !current_page?(root_path) && !current_page?('/signin') && !current_page?('/signup') %>
+    <% if !current_page?('/signin') && !current_page?('/signup') %>
       <%= render 'layouts/footer' %>
     <% end %>
   <% end %>

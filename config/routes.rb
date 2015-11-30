@@ -5,17 +5,24 @@ BrainsUniversity::Application.routes.draw do
   resources :videos, only: [:index, :new, :create, :show]
   resources :modulos, only: [:index] do
     collection do
-      get 'termodinamica'
+      resources :termodinamica, only: [:index, :show]
       get 'estatica'
+      get 'estatica/equilibrio_cuerpos_rigidos'
     end
   end
+
+  # resources :estatica, only: [:index] do
+  #   collection do
+  #     get 'cuerpos-rigidos-sistema-de-equilibrio'
+  #   end
+  # end
   
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   match '/users',   to: 'users#show',           via: 'get'
   match '/videos',  to: 'user#index',           via: 'get'
-  match '/about',   to: 'static_pages#about',   via: 'get'
+  # match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/landing', to: 'static_pages#landing', via: 'get'
   match '/home',    to: 'static_pages#home', via: 'get'
@@ -27,7 +34,7 @@ BrainsUniversity::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'static_pages#landing'
+   root 'static_pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

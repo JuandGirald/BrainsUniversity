@@ -21,6 +21,13 @@
 .background-estatica7 {
   background: url('../assets/estatica/submodulo7.png');
 }
+.rigidos-banner {
+  background: url('../assets/estatica/cuerpo-rigido/cuerpo-rigido-banner.png'); 
+  background-size: cover;
+  height: 34em;
+  background-position-x: -12px;
+  margin-bottom: 4em;
+}
 
 #estatica {
   font-family: 'Amaranth', sans-serif;
