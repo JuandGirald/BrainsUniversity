@@ -11,7 +11,9 @@
 		</div>
     <div class="comments">
       <h2>Comentarios</h2>
-      <%= render :partial => 'comments/form', :locals => { :comment => @new_comment } %>
+      <% if current_user %>
+        <%= render :partial => 'comments/form', :locals => { :comment => @new_comment } %>
+      <% end %>
       <%= render :partial => 'comments/comment', :collection => @comments, :as => :comment %>
     </div>
 	</div>	
