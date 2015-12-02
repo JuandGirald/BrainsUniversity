@@ -1,17 +1,16 @@
-$(document).ready ->
+jQuery ->
   # Create a comment
-  jQuery ->
-    $(".comment-form")
-      .on "ajax:beforeSend", (evt, xhr, settings) ->
-        $(this).find('textarea')
-          .addClass('uneditable-input')
-          .attr('disabled', 'disabled');
-      .on "ajax:success", (evt, data, status, xhr) ->
-        $(this).find('textarea')
-          .removeClass('uneditable-input')
-          .removeAttr('disabled', 'disabled')
-          .val('');
-        $(xhr.responseText).hide().insertAfter($(this)).show('slow')
+  $(".comment-form")
+    .on "ajax:beforeSend", (evt, xhr, settings) ->
+      $(this).find('textarea')
+        .addClass('uneditable-input')
+        .attr('disabled', 'disabled');
+    .on "ajax:success", (evt, data, status, xhr) ->
+      $(this).find('textarea')
+        .removeClass('uneditable-input')
+        .removeAttr('disabled', 'disabled')
+        .val('');
+      $(xhr.responseText).hide().insertAfter($(this)).show('slow')
 
   # Delete a comment
   $(document)
