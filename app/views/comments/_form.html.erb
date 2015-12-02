@@ -1,0 +1,10 @@
+<div class="comment-form">
+  <%= simple_form_for comment, :remote => true do |f| %>
+    <div class="form-group">
+      <%= f.input :body, as: :text, :input_html => { :rows => "4", :class => "form-control" },:label => false %>  
+    </div>
+    <%= f.input :commentable_id, :as => :hidden, :value => comment.commentable_id %>
+    <%= f.input :commentable_type, :as => :hidden, :value => comment.commentable_type %>
+    <%= f.button :submit, :class => "btn btn-primary", :disable_with => "Submitting…" %>
+  <% end %>
+</div>

@@ -3,9 +3,10 @@ BrainsUniversity::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :videos, only: [:index, :new, :create, :show]
+  resources :comments, :only => [:create, :destroy]
   resources :modulos, only: [:index] do
     collection do
-      resources :termodinamica, only: [:index, :show]
+      get 'termodinamica'
       get 'estatica'
       get 'estatica/equilibrio_cuerpos_rigidos'
     end

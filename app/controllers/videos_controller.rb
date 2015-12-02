@@ -17,6 +17,8 @@ class VideosController < ApplicationController
 	end
 
 	def show	
+    @comments = @video.comment_threads.order('created_at desc')
+    @new_comment = Comment.build_from(@video, current_user.id, "") if current_user
 	end
 	 
 	def create

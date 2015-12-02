@@ -9,5 +9,10 @@
         <button type="button" class="btn btn-primary"> Escribenos tus dudas </button>                
       <% end %>
 		</div>
+    <div class="comments">
+      <h2>Comentarios</h2>
+      <%= render :partial => 'comments/form', :locals => { :comment => @new_comment } %>
+      <%= render :partial => 'comments/comment', :collection => @comments, :as => :comment %>
+    </div>
 	</div>	
 </section>
