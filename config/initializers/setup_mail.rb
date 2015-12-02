@@ -1,8 +1,8 @@
 ActionMailer::Base.smtp_settings = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
-  :domain               => "solvingbooks.com",
-  :user_name            => "admin@solvingbooks.com",
+  :domain               => "tarmac.io",
+  :user_name            => "juanr@tarmac.io",
   :password             => ENV["GMAIL_PASSWORD"],
   :authentication       => :plain,
   :enable_starttls_auto => true
