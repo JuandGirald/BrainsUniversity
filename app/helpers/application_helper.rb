@@ -18,7 +18,7 @@ module ApplicationHelper
 	    youtube_id = $5
 	  end
 
-	  iframe = %Q{<iframe title='YouTube video player' width='640' height='390' src='http://www.youtube.com/embed/#{ youtube_id }' frameborder='0' allowfullscreen></iframe>}
+	  iframe = %Q{<iframe title='YouTube video player' width='640' height='480' src='http://www.youtube.com/embed/#{ youtube_id }' frameborder='0' allowfullscreen></iframe>}
 		iframe.html_safe
 	end
   

@@ -28,6 +28,8 @@ BrainsUniversity::Application.routes.draw do
   match '/home',    to: 'static_pages#home', via: 'get'
   
 
+  get "videos/:id/doubts" => 'videos#doubts', :as => :doubts
+  post "videos/doubts_mail" => 'videos#doubts_mail', :as => :doubts_mail
   match '/contact',  to: 'static_pages#create',        via: 'post'
 
   # The priority is based upon order of creation: first created -> highest priority.

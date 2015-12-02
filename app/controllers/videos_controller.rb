@@ -16,8 +16,7 @@ class VideosController < ApplicationController
   	end
 	end
 
-	def show
-		
+	def show	
 	end
 	 
 	def create
@@ -36,10 +35,38 @@ class VideosController < ApplicationController
     redirect_to root_path
   end
 
+  def doubts
+    @message = Message.new
+    respond_to do |format|
+      format.js
+      format.html
+    end
+  end
+
+  def doubts_mail
+    @message = Message.new(doubts_message_params)
+
+    if @message.valid?
+      DoubtsMailer.new_message(@message).deliver
+    else
+      flash.now.alert = "Check the error list"
+    end
+
+    respond_to do |format|
+      format.js
+      format.html
+    end
+  end
+
 	private
 
 		def set_user
       @video = Video.find(params[:id])
+    end
+
+    def doubts_message_params
+      params.require(:message).permit(:name, :email, :subject,
+                                      :body)
     end
 
 		def video_params

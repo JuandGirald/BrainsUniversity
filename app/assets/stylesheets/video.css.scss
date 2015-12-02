@@ -12,6 +12,7 @@
 }
 .video-player{
 	margin: 0 auto;
+	margin-top: 2em;
 	margin-bottom: 4em;
 	width: 75%;
 	iframe{
@@ -23,6 +24,18 @@
 		h1{
 			font-size: 2em;
 			margin-top: 1em;
+		}
+	}
+}
+
+.doubts-form {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	.actions {
+		input {
+			color: white;
+    	background-color: #337ab7 !important;
+    	border-color: #2e6da4 !important;
 		}
 	}
 }
@@ -39,6 +52,15 @@
 		color: white;
 	}
 }
+#modal-window {
+	.modal-header {
+		border-bottom: none;
+	}
+	.modal-body {
+		padding-top: 0;
+	}
+}
+
 .btn:hover.button-search {
 	color: white !important;
 }

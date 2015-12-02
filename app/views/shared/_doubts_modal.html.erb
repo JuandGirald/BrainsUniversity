@@ -1,0 +1,43 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Escribenos tus dudas acerca del ejercicio, recuerda escribir tu duda de la mejor manera para poder ofrecerte nuestra ayuda oportuna. </h3>
+    </div>
+    <div class="modal-body">
+      <div class="col-xs-12">
+
+        <%= form_for @message, remote: true, url: doubts_mail_path ,:html => { :class => 'contact doubts-form'} do |f| %>
+          <div class="row">
+            <div class="col-sm-6">
+              <%= f.label :name do %>
+                Tu nombre <b class="required"></b>
+              <% end %>
+              <%= f.text_field :name, :required => true, placeholder: "Pepito Perez" %>
+            </div>
+            <div class="col-xs-6">
+              <%= f.label :email do %>
+                Tu correo <b class="required"></b>
+              <% end %>
+              <%= f.text_field :email, :required => true, placeholder: "John@Stuart.com"%>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <%= f.label :body do %>
+                Escribe tu duda <b class="required"></b>
+              <% end %>
+              <%= f.text_area :body, :required => true, rows: 4, placeholder: "Ej: En que situaciones se aplica torque en un punto dado?..." %>
+            </div>
+          </div>
+          <div class="actions">
+            <%= f.submit 'Send', class: 'btn btn-primary', data: {disable_with: "Sending..."} %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>  
+  </div>
+</div>

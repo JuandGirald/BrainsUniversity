@@ -1,0 +1,4 @@
+jQuery.noConflict();
+$("#modal-window").modal('hide');
+$("#modal-thanks").modal().html("<%= escape_javascript(render 'thanks') %>");
+$("#modal-thanks").html("<%= escape_javascript(render 'thanks') %>");
