@@ -55,6 +55,9 @@
 #modal-window {
 	.modal-header {
 		border-bottom: none;
+		.modal-logo {
+			width: 90%;
+		}
 	}
 	.modal-body {
 		padding-top: 0;
