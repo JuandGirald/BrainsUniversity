@@ -72,6 +72,9 @@ gem 'youtube_it', '~> 2.4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.2'
 
+# Comments gem
+gem 'acts_as_commentable_with_threading'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
