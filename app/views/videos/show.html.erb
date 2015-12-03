@@ -6,7 +6,7 @@
 		<div class="video-player">
 			<%= youtube_embed(@video.link) %>	
       <%= link_to doubts_path(@video.id),  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', 'data-dev' => "#{@video.title}"} do %>
-        <button type="button" class="btn btn-primary"> Escribenos tus dudas </button>                
+        <button type="button" class="btn btn-primary"> Escríbenos tus dudas </button>                
       <% end %>
 		</div>
     <div class="comments">
